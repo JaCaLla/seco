@@ -88,3 +88,93 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+seco/Podfile.lock
+seco/Pods/Manifest.lock
+seco/Pods/Alamofire/LICENSE
+seco/Pods/Alamofire/README.md
+seco/Pods/Alamofire/Source/AFError.swift
+seco/Pods/Alamofire/Source/Alamofire.swift
+seco/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+seco/Pods/Alamofire/Source/MultipartFormData.swift
+seco/Pods/Alamofire/Source/NetworkReachabilityManager.swift
+seco/Pods/Alamofire/Source/Notifications.swift
+seco/Pods/Alamofire/Source/ParameterEncoding.swift
+seco/Pods/Alamofire/Source/Request.swift
+seco/Pods/Alamofire/Source/Response.swift
+seco/Pods/Alamofire/Source/ResponseSerialization.swift
+seco/Pods/Alamofire/Source/Result.swift
+seco/Pods/Alamofire/Source/ServerTrustPolicy.swift
+seco/Pods/Alamofire/Source/SessionDelegate.swift
+seco/Pods/Alamofire/Source/SessionManager.swift
+seco/Pods/Alamofire/Source/TaskDelegate.swift
+seco/Pods/Alamofire/Source/Timeline.swift
+seco/Pods/Alamofire/Source/Validation.swift
+seco/Pods/Pods.xcodeproj/project.pbxproj
+seco/Pods/R.swift/License
+seco/Pods/R.swift/rswift
+seco/Pods/R.swift.Library/License
+seco/Pods/R.swift.Library/Readme.md
+seco/Pods/R.swift.Library/Library/Core/ColorResource.swift
+seco/Pods/R.swift.Library/Library/Core/FileResource.swift
+seco/Pods/R.swift.Library/Library/Core/FontResource.swift
+seco/Pods/R.swift.Library/Library/Core/Identifier.swift
+seco/Pods/R.swift.Library/Library/Core/ImageResource.swift
+seco/Pods/R.swift.Library/Library/Core/NibResource.swift
+seco/Pods/R.swift.Library/Library/Core/ReuseIdentifierProtocol.swift
+seco/Pods/R.swift.Library/Library/Core/StoryboardResource.swift
+seco/Pods/R.swift.Library/Library/Core/StoryboardSegueIdentifierProtocol.swift
+seco/Pods/R.swift.Library/Library/Core/StoryboardViewControllerResource.swift
+seco/Pods/R.swift.Library/Library/Core/StringResource.swift
+seco/Pods/R.swift.Library/Library/Core/Validatable.swift
+seco/Pods/R.swift.Library/Library/Foundation/Bundle+FileResource.swift
+seco/Pods/R.swift.Library/Library/Foundation/Data+FileResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/NibResource+UIKit.swift
+seco/Pods/R.swift.Library/Library/UIKit/StoryboardResourceWithInitialController+UIKit.swift
+seco/Pods/R.swift.Library/Library/UIKit/TypedStoryboardSegueInfo+UIStoryboardSegue.swift
+seco/Pods/R.swift.Library/Library/UIKit/UICollectionView+ReuseIdentifierProtocol.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIColor+ColorResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIFont+FontResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIImage+ImageResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UINib+NibResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIStoryboard+StoryboardViewControllerResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UITableView+ReuseIdentifierProtocol.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIViewController+NibResource.swift
+seco/Pods/R.swift.Library/Library/UIKit/UIViewController+StoryboardSegueIdentifierProtocol.swift
+seco/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+seco/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
+seco/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+seco/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+seco/Pods/Target Support Files/Alamofire/Alamofire.modulemap
+seco/Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-acknowledgements.markdown
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-acknowledgements.plist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-dummy.m
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-frameworks-Debug-input-files.xcfilelist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-frameworks-Debug-output-files.xcfilelist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-frameworks-Release-input-files.xcfilelist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-frameworks-Release-output-files.xcfilelist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-frameworks.sh
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-Info.plist
+seco/Pods/Target Support Files/Pods-seco/Pods-seco-umbrella.h
+seco/Pods/Target Support Files/Pods-seco/Pods-seco.debug.xcconfig
+seco/Pods/Target Support Files/Pods-seco/Pods-seco.modulemap
+seco/Pods/Target Support Files/Pods-seco/Pods-seco.release.xcconfig
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests-acknowledgements.markdown
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests-acknowledgements.plist
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests-dummy.m
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests-Info.plist
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests-umbrella.h
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests.debug.xcconfig
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests.modulemap
+seco/Pods/Target Support Files/Pods-secoTests/Pods-secoTests.release.xcconfig
+seco/Pods/Target Support Files/R.swift/R.swift.xcconfig
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library-dummy.m
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library-Info.plist
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library-prefix.pch
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library-umbrella.h
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library.modulemap
+seco/Pods/Target Support Files/R.swift.Library/R.swift.Library.xcconfig
+seco/seco.xcworkspace/contents.xcworkspacedata
+seco/seco.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+seco/ViewLayer/Resources/R.Swift/R.generated.swift

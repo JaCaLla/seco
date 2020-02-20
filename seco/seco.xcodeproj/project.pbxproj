@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E70DED023FF1FC800ACC2C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70DECF23FF1FC800ACC2C7 /* AppDelegate.swift */; };
+		5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70DED123FF1FC800ACC2C7 /* SceneDelegate.swift */; };
+		5E70DED423FF1FC800ACC2C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70DED323FF1FC800ACC2C7 /* ViewController.swift */; };
+		5E70DED723FF1FC800ACC2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E70DED523FF1FC800ACC2C7 /* Main.storyboard */; };
+		5E70DED923FF1FC800ACC2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E70DED823FF1FC800ACC2C7 /* Assets.xcassets */; };
+		5E70DEDC23FF1FC800ACC2C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E70DEDA23FF1FC800ACC2C7 /* LaunchScreen.storyboard */; };
+		5E70DEE723FF1FC900ACC2C7 /* secoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70DEE623FF1FC900ACC2C7 /* secoTests.swift */; };
+		5E70DEF623FF22DF00ACC2C7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E70DEF523FF22DF00ACC2C7 /* R.generated.swift */; };
+		7F5FA60B6204E1E43CDDC82C /* Pods_seco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6EA200DF6DE7F6846B20637 /* Pods_seco.framework */; };
+		D5117A411B81C0D1C18B3BE8 /* Pods_secoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E90D9FD52AB3485DFE3C5A3 /* Pods_secoTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E70DEE323FF1FC900ACC2C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E70DEC423FF1FC800ACC2C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E70DECB23FF1FC800ACC2C7;
+			remoteInfo = seco;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09D9AC7E0AB2BF3639881ACB /* Pods-secoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secoTests.release.xcconfig"; path = "Target Support Files/Pods-secoTests/Pods-secoTests.release.xcconfig"; sourceTree = "<group>"; };
+		0EA6C57A37C7FBF5392D879E /* Pods-seco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seco.release.xcconfig"; path = "Target Support Files/Pods-seco/Pods-seco.release.xcconfig"; sourceTree = "<group>"; };
+		5E70DECC23FF1FC800ACC2C7 /* seco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seco.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E70DECF23FF1FC800ACC2C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E70DED123FF1FC800ACC2C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5E70DED323FF1FC800ACC2C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E70DED623FF1FC800ACC2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E70DED823FF1FC800ACC2C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E70DEDB23FF1FC800ACC2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E70DEDD23FF1FC800ACC2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E70DEE223FF1FC900ACC2C7 /* secoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = secoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E70DEE623FF1FC900ACC2C7 /* secoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secoTests.swift; sourceTree = "<group>"; };
+		5E70DEE823FF1FC900ACC2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E70DEF523FF22DF00ACC2C7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ViewLayer/Resources/R.Swift/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		655176D7B5AD0657781AF87E /* Pods-secoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secoTests.debug.xcconfig"; path = "Target Support Files/Pods-secoTests/Pods-secoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E90D9FD52AB3485DFE3C5A3 /* Pods_secoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_secoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D254EDB50B0A0EBE377BCEE7 /* Pods-seco.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seco.debug.xcconfig"; path = "Target Support Files/Pods-seco/Pods-seco.debug.xcconfig"; sourceTree = "<group>"; };
+		E6EA200DF6DE7F6846B20637 /* Pods_seco.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_seco.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E70DEC923FF1FC800ACC2C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5FA60B6204E1E43CDDC82C /* Pods_seco.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E70DEDF23FF1FC900ACC2C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5117A411B81C0D1C18B3BE8 /* Pods_secoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EA184EB57C957EB531848B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EA200DF6DE7F6846B20637 /* Pods_seco.framework */,
+				7E90D9FD52AB3485DFE3C5A3 /* Pods_secoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E70DEC323FF1FC800ACC2C7 = {
+			isa = PBXGroup;
+			children = (
+				5E70DECE23FF1FC800ACC2C7 /* seco */,
+				5E70DEE523FF1FC900ACC2C7 /* secoTests */,
+				5E70DECD23FF1FC800ACC2C7 /* Products */,
+				B0484CBF908640EE712CB988 /* Pods */,
+				4EA184EB57C957EB531848B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5E70DECD23FF1FC800ACC2C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DECC23FF1FC800ACC2C7 /* seco.app */,
+				5E70DEE223FF1FC900ACC2C7 /* secoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E70DECE23FF1FC800ACC2C7 /* seco */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DEF223FF20B400ACC2C7 /* ViewLayer */,
+				5E70DECF23FF1FC800ACC2C7 /* AppDelegate.swift */,
+				5E70DED123FF1FC800ACC2C7 /* SceneDelegate.swift */,
+				5E70DED323FF1FC800ACC2C7 /* ViewController.swift */,
+				5E70DED523FF1FC800ACC2C7 /* Main.storyboard */,
+				5E70DED823FF1FC800ACC2C7 /* Assets.xcassets */,
+				5E70DEDA23FF1FC800ACC2C7 /* LaunchScreen.storyboard */,
+				5E70DEDD23FF1FC800ACC2C7 /* Info.plist */,
+			);
+			path = seco;
+			sourceTree = "<group>";
+		};
+		5E70DEE523FF1FC900ACC2C7 /* secoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DEE623FF1FC900ACC2C7 /* secoTests.swift */,
+				5E70DEE823FF1FC900ACC2C7 /* Info.plist */,
+			);
+			path = secoTests;
+			sourceTree = "<group>";
+		};
+		5E70DEF223FF20B400ACC2C7 /* ViewLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DEF323FF20BF00ACC2C7 /* Resources */,
+			);
+			path = ViewLayer;
+			sourceTree = "<group>";
+		};
+		5E70DEF323FF20BF00ACC2C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DEF423FF20CE00ACC2C7 /* R.Swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5E70DEF423FF20CE00ACC2C7 /* R.Swift */ = {
+			isa = PBXGroup;
+			children = (
+				5E70DEF523FF22DF00ACC2C7 /* R.generated.swift */,
+			);
+			path = R.Swift;
+			sourceTree = "<group>";
+		};
+		B0484CBF908640EE712CB988 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D254EDB50B0A0EBE377BCEE7 /* Pods-seco.debug.xcconfig */,
+				0EA6C57A37C7FBF5392D879E /* Pods-seco.release.xcconfig */,
+				655176D7B5AD0657781AF87E /* Pods-secoTests.debug.xcconfig */,
+				09D9AC7E0AB2BF3639881ACB /* Pods-secoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E70DECB23FF1FC800ACC2C7 /* seco */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E70DEEB23FF1FC900ACC2C7 /* Build configuration list for PBXNativeTarget "seco" */;
+			buildPhases = (
+				C26845D8C053A02E3C78CD5F /* [CP] Check Pods Manifest.lock */,
+				5E70DEC823FF1FC800ACC2C7 /* Sources */,
+				5E70DEC923FF1FC800ACC2C7 /* Frameworks */,
+				5E70DECA23FF1FC800ACC2C7 /* Resources */,
+				1BCBEE492395CF73268B4997 /* [CP] Embed Pods Frameworks */,
+				5E70DEF123FF208A00ACC2C7 /* R.Swift */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = seco;
+			productName = seco;
+			productReference = 5E70DECC23FF1FC800ACC2C7 /* seco.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E70DEE123FF1FC900ACC2C7 /* secoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E70DEEE23FF1FC900ACC2C7 /* Build configuration list for PBXNativeTarget "secoTests" */;
+			buildPhases = (
+				65BF00036B20C341F37B9C5B /* [CP] Check Pods Manifest.lock */,
+				5E70DEDE23FF1FC900ACC2C7 /* Sources */,
+				5E70DEDF23FF1FC900ACC2C7 /* Frameworks */,
+				5E70DEE023FF1FC900ACC2C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E70DEE423FF1FC900ACC2C7 /* PBXTargetDependency */,
+			);
+			name = secoTests;
+			productName = secoTests;
+			productReference = 5E70DEE223FF1FC900ACC2C7 /* secoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E70DEC423FF1FC800ACC2C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Javier Calatrava";
+				TargetAttributes = {
+					5E70DECB23FF1FC800ACC2C7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					5E70DEE123FF1FC900ACC2C7 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 5E70DECB23FF1FC800ACC2C7;
+					};
+				};
+			};
+			buildConfigurationList = 5E70DEC723FF1FC800ACC2C7 /* Build configuration list for PBXProject "seco" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E70DEC323FF1FC800ACC2C7;
+			productRefGroup = 5E70DECD23FF1FC800ACC2C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E70DECB23FF1FC800ACC2C7 /* seco */,
+				5E70DEE123FF1FC900ACC2C7 /* secoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E70DECA23FF1FC800ACC2C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E70DEDC23FF1FC800ACC2C7 /* LaunchScreen.storyboard in Resources */,
+				5E70DED923FF1FC800ACC2C7 /* Assets.xcassets in Resources */,
+				5E70DED723FF1FC800ACC2C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E70DEE023FF1FC900ACC2C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BCBEE492395CF73268B4997 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-seco/Pods-seco-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-seco/Pods-seco-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-seco/Pods-seco-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E70DEF123FF208A00ACC2C7 /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/ViewLayer/Resources/R.Swift/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \">>>>>>>>>>>>>>>> R.Swift >>>>>>>>>>>>>>>>>>>>>>\"\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/ViewLayer/Resources/R.Swift/R.generated.swift\"\nls \"$SRCROOT/ViewLayer/Resources/R.Swift/R.generated.swift\"\necho \"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\"\n";
+		};
+		65BF00036B20C341F37B9C5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-secoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C26845D8C053A02E3C78CD5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-seco-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E70DEC823FF1FC800ACC2C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E70DED423FF1FC800ACC2C7 /* ViewController.swift in Sources */,
+				5E70DED023FF1FC800ACC2C7 /* AppDelegate.swift in Sources */,
+				5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */,
+				5E70DEF623FF22DF00ACC2C7 /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E70DEDE23FF1FC900ACC2C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E70DEE723FF1FC900ACC2C7 /* secoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E70DEE423FF1FC900ACC2C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E70DECB23FF1FC800ACC2C7 /* seco */;
+			targetProxy = 5E70DEE323FF1FC900ACC2C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E70DED523FF1FC800ACC2C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E70DED623FF1FC800ACC2C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E70DEDA23FF1FC800ACC2C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E70DEDB23FF1FC800ACC2C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E70DEE923FF1FC900ACC2C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E70DEEA23FF1FC900ACC2C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E70DEEC23FF1FC900ACC2C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D254EDB50B0A0EBE377BCEE7 /* Pods-seco.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = seco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jca.seco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E70DEED23FF1FC900ACC2C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA6C57A37C7FBF5392D879E /* Pods-seco.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = seco/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jca.seco;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5E70DEEF23FF1FC900ACC2C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655176D7B5AD0657781AF87E /* Pods-secoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = secoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jca.secoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seco.app/seco";
+			};
+			name = Debug;
+		};
+		5E70DEF023FF1FC900ACC2C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D9AC7E0AB2BF3639881ACB /* Pods-secoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = secoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jca.secoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seco.app/seco";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E70DEC723FF1FC800ACC2C7 /* Build configuration list for PBXProject "seco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E70DEE923FF1FC900ACC2C7 /* Debug */,
+				5E70DEEA23FF1FC900ACC2C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E70DEEB23FF1FC900ACC2C7 /* Build configuration list for PBXNativeTarget "seco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E70DEEC23FF1FC900ACC2C7 /* Debug */,
+				5E70DEED23FF1FC900ACC2C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E70DEEE23FF1FC900ACC2C7 /* Build configuration list for PBXNativeTarget "secoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E70DEEF23FF1FC900ACC2C7 /* Debug */,
+				5E70DEF023FF1FC900ACC2C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E70DEC423FF1FC800ACC2C7 /* Project object */;
+}
