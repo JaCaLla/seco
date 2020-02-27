@@ -32,6 +32,11 @@
 		5E8426692407DF6D00B71563 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8426682407DF6D00B71563 /* Point.swift */; };
 		5E84266B2407E1AD00B71563 /* PointUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84266A2407E1AD00B71563 /* PointUT.swift */; };
 		5E84266D2407F78400B71563 /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84266C2407F78400B71563 /* RouteMap.swift */; };
+		5E8C86DC2408435E0007CF6E /* StopPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C86DB2408435E0007CF6E /* StopPoint.swift */; };
+		5E8C86DE240845870007CF6E /* StopPointUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C86DD240845870007CF6E /* StopPointUT.swift */; };
+		5E8C86E0240852D20007CF6E /* StopPointVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C86DF240852D20007CF6E /* StopPointVM.swift */; };
+		5E8C86E22408535D0007CF6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E8C86E12408535D0007CF6E /* Localizable.strings */; };
+		5E8C86E4240854410007CF6E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8C86E3240854410007CF6E /* StringExtension.swift */; };
 		5E8E1C672407145E0051EAF6 /* RoutesVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C662407145E0051EAF6 /* RoutesVCMock.swift */; };
 		5E8E1C6C240718760051EAF6 /* RoutesVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6B240718760051EAF6 /* RoutesVCUT.swift */; };
 		5E8E1C6E240722830051EAF6 /* RoutesPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */; };
@@ -92,6 +97,11 @@
 		5E8426682407DF6D00B71563 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		5E84266A2407E1AD00B71563 /* PointUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointUT.swift; sourceTree = "<group>"; };
 		5E84266C2407F78400B71563 /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
+		5E8C86DB2408435E0007CF6E /* StopPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPoint.swift; sourceTree = "<group>"; };
+		5E8C86DD240845870007CF6E /* StopPointUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointUT.swift; sourceTree = "<group>"; };
+		5E8C86DF240852D20007CF6E /* StopPointVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPointVM.swift; sourceTree = "<group>"; };
+		5E8C86E12408535D0007CF6E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5E8C86E3240854410007CF6E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5E8E1C662407145E0051EAF6 /* RoutesVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesVCMock.swift; sourceTree = "<group>"; };
 		5E8E1C6B240718760051EAF6 /* RoutesVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesVCUT.swift; sourceTree = "<group>"; };
 		5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenterUT.swift; sourceTree = "<group>"; };
@@ -146,6 +156,7 @@
 			children = (
 				5E6834E92405BAF9001631FD /* Route.swift */,
 				5E8426682407DF6D00B71563 /* Point.swift */,
+				5E8C86DB2408435E0007CF6E /* StopPoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,8 +164,8 @@
 		5E6834ED2405C99A001631FD /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				5E8E1C71240725200051EAF6 /* DomainLayer */,
 				5E8E1C63240708EF0051EAF6 /* ViewLayer */,
+				5E8E1C71240725200051EAF6 /* DomainLayer */,
 				5E6834EE2405C9A3001631FD /* DataLayer */,
 			);
 			path = Mocks;
@@ -182,6 +193,7 @@
 			children = (
 				5E6834EB2405BEBC001631FD /* RouteUT.swift */,
 				5E84266A2407E1AD00B71563 /* PointUT.swift */,
+				5E8C86DD240845870007CF6E /* StopPointUT.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,6 +215,7 @@
 				5E84266C2407F78400B71563 /* RouteMap.swift */,
 				5E84265B24079FEF00B71563 /* RouteListCell.swift */,
 				5E84265D2407A5BD00B71563 /* RouteVM.swift */,
+				5E8C86DF240852D20007CF6E /* StopPointVM.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,8 +315,8 @@
 			children = (
 				5E6834ED2405C99A001631FD /* Mocks */,
 				5E8E1C68240717CD0051EAF6 /* ViewLayer */,
-				5E6CDE46240482B5000B4EE8 /* DataLayer */,
 				5EC550812406ADA10073AD6A /* DomainLayer */,
+				5E6CDE46240482B5000B4EE8 /* DataLayer */,
 				5E70DEE823FF1FC900ACC2C7 /* Info.plist */,
 			);
 			path = secoTests;
@@ -324,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				5E70DED823FF1FC800ACC2C7 /* Assets.xcassets */,
+				5E8C86E12408535D0007CF6E /* Localizable.strings */,
 				5E70DEF423FF20CE00ACC2C7 /* R.Swift */,
 			);
 			path = Resources;
@@ -435,6 +449,7 @@
 		5EC550782406A7650073AD6A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5E8C86E3240854410007CF6E /* StringExtension.swift */,
 				5EC550792406A7AD0073AD6A /* UIApplicationExtension.swift */,
 			);
 			path = Extensions;
@@ -560,6 +575,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E8C86E22408535D0007CF6E /* Localizable.strings in Resources */,
 				5E70DEDC23FF1FC800ACC2C7 /* LaunchScreen.storyboard in Resources */,
 				5E70DED923FF1FC800ACC2C7 /* Assets.xcassets in Resources */,
 				5E70DED723FF1FC800ACC2C7 /* Main.storyboard in Resources */,
@@ -666,6 +682,8 @@
 			files = (
 				5E84265E2407A5BD00B71563 /* RouteVM.swift in Sources */,
 				5E6CDE4B2404847A000B4EE8 /* ResponseCodeAPI.swift in Sources */,
+				5E8C86E0240852D20007CF6E /* StopPointVM.swift in Sources */,
+				5E8C86DC2408435E0007CF6E /* StopPoint.swift in Sources */,
 				5EC550802406AA5B0073AD6A /* RoutesInteractor.swift in Sources */,
 				5E6834E72405B9AF001631FD /* DataManager.swift in Sources */,
 				5EC5506B24069FF20073AD6A /* RoutesPresenter.swift in Sources */,
@@ -686,6 +704,7 @@
 				5E84266D2407F78400B71563 /* RouteMap.swift in Sources */,
 				5E7A06D72405108800157138 /* PointAPI.swift in Sources */,
 				5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */,
+				5E8C86E4240854410007CF6E /* StringExtension.swift in Sources */,
 				5E70DEF623FF22DF00ACC2C7 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E6834F42405CBA6001631FD /* DataManagerUT.swift in Sources */,
+				5E8C86DE240845870007CF6E /* StopPointUT.swift in Sources */,
 				5E8426602407A70600B71563 /* RouteVMUT.swift in Sources */,
 				5E6834EC2405BEBC001631FD /* RouteUT.swift in Sources */,
 				5EC550832406ADD10073AD6A /* RoutesInteractorUT.swift in Sources */,
@@ -899,6 +919,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
 				INFOPLIST_FILE = secoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -921,6 +942,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
 				INFOPLIST_FILE = secoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,7 +10,8 @@ import Foundation
 
 // MARK: - Protocol
 protocol RoutesInteractorProtocol {
-    func getAllRoutes2(onComplete: @escaping (Swift.Result<([Route]), Error>) -> Void)
+    func getAllRoutes(onComplete: @escaping (Swift.Result<([Route]), Error>) -> Void)
+    func getStop(stopId: Int, onComplete: @escaping (Swift.Result<StopPoint, Error>) -> Void)
 }
 
 class RoutesInteractor {
@@ -27,7 +28,11 @@ class RoutesInteractor {
 // MARK: - RoutesInteractorProtocol
 extension RoutesInteractor: RoutesInteractorProtocol {
     
-    func getAllRoutes2(onComplete: @escaping (Swift.Result<([Route]), Error>) -> Void) {
-        dataManager.getAllRoutes2(onComplete: onComplete)
+    func getAllRoutes(onComplete: @escaping (Swift.Result<([Route]), Error>) -> Void) {
+        dataManager.getAllRoutes(onComplete: onComplete)
+    }
+    
+    func getStop(stopId: Int, onComplete: @escaping (Result<StopPoint, Error>) -> Void) {
+        dataManager.getStop(stopId: stopId, onComplete: onComplete)
     }
 }

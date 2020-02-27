@@ -19,16 +19,11 @@ class DataManagerUT: XCTestCase {
         sut = DataManager(apiManager: apiManager)
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func test_getAllRoutes() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
         let asyncExpectation = expectation(description: "\(#function)")
 
-        sut.getAllRoutes2(onComplete: { result in
+        sut.getAllRoutes(onComplete: { result in
             switch result {
             case .success(let routes):
                 XCTAssertEqual(routes.count, 1)
@@ -50,5 +45,23 @@ class DataManagerUT: XCTestCase {
         })
         self.waitForExpectations(timeout: 2.0, handler: nil)
     }
+    
+    func test_getStopPoint() {
+        let asyncExpectation = expectation(description: "\(#function)")
 
+        sut.getStop(stopId: 1, onComplete: { result in
+           switch result {
+            case .success(let stopPoint):
+                XCTAssertEqual(stopPoint.stopTime, "2018-12-18T09:00:00.000Z")
+                 XCTAssertEqual(stopPoint.paid, true)
+                 XCTAssertEqual(stopPoint.userName, "Manuel Gomez")
+            case .failure:
+                XCTFail()
+
+            }
+            asyncExpectation.fulfill()
+        })
+        
+        self.waitForExpectations(timeout: 2.0, handler: nil)
+    }
 }

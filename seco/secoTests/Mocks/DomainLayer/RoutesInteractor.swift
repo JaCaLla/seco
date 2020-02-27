@@ -10,11 +10,14 @@ import Foundation
 @testable import seco
 
 class RoutesInteractorMock: RoutesInteractorProtocol {
+    
     var getAllRoutesCalled: Bool = false
+    var getStopCalled: Bool = false
 
     var routes: [Route]?
+    var stopPoint: StopPoint?
 
-    func getAllRoutes2(onComplete: @escaping (Result<([Route]), Error>) -> Void) {
+    func getAllRoutes(onComplete: @escaping (Result<([Route]), Error>) -> Void) {
         getAllRoutesCalled = true
 
         guard let uwpRoutes = routes else {
@@ -26,6 +29,20 @@ class RoutesInteractorMock: RoutesInteractorProtocol {
         }
 
         onComplete(.success(uwpRoutes))
+    }
+    
+    func getStop(stopId: Int, onComplete: @escaping (Result<StopPoint, Error>) -> Void) {
+        getStopCalled = true
+        
+        guard let uwpStopPoint = stopPoint else {
+            let error = NSError(domain: "Domain",
+                                code: ResponseCodeAPI.testForcedError.rawValue,
+                                userInfo: [:])
+            onComplete(.failure(error))
+            return
+        }
+
+        onComplete(.success(uwpStopPoint))
     }
 
 }

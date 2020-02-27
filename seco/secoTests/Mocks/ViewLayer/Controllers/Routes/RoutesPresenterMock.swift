@@ -10,9 +10,11 @@ import Foundation
 @testable import seco
 
 class RoutesPresenterMock: RoutesPresenterProtocol {
+  
     
     var setRoutesCalled: Bool = false
     var fetchRoutesCalled: Bool = false
+    var fetchStopPointCalled: Bool = false
     
     func set(routesVC: RoutesVCProtocol) {
         setRoutesCalled = true
@@ -22,5 +24,9 @@ class RoutesPresenterMock: RoutesPresenterProtocol {
         fetchRoutesCalled = true
     }
     
+    func fetchStopPoint(stopId: Int) {
+          fetchStopPointCalled = true
+      }
+      
     
 }

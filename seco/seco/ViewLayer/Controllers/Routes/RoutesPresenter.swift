@@ -11,6 +11,7 @@ import Foundation
 protocol RoutesPresenterProtocol {
     func set(routesVC: RoutesVCProtocol)
     func fetchRoutes()
+    func fetchStopPoint(stopId: Int)
 }
 
 class RoutesPresenter {
@@ -33,15 +34,30 @@ extension RoutesPresenter: RoutesPresenterProtocol {
 
     func fetchRoutes() {
         self.view?.presentActivityIndicator()
-        self.interactor.getAllRoutes2(onComplete: { result in
+        self.interactor.getAllRoutes(onComplete: { [weak self] result in
             DispatchQueue.main.async {
-                self.view?.removeActivityIndicator()
+                self?.view?.removeActivityIndicator()
                 switch result {
                 case .success(let routes):
                     let routesVM: [RouteVM] = routes.map({ RouteVM(route: $0) })
-                    self.view?.presentFetchedRoutes(routesVM: routesVM)
+                    self?.view?.presentFetchedRoutes(routesVM: routesVM)
                 case .failure(let error):
-                    self.view?.present(error: error)
+                    self?.view?.present(error: error)
+                }
+            }
+        })
+    }
+    
+    func fetchStopPoint(stopId: Int) {
+        self.view?.presentActivityIndicator()
+        self.interactor.getStop(stopId: stopId, onComplete: { [weak self] result in
+            DispatchQueue.main.async {
+                self?.view?.removeActivityIndicator()
+                switch result {
+                case .success(let stopPoint):
+                    self?.view?.presentPopUp(stopPointVM: StopPointVM(stopPoint: stopPoint))
+                case .failure( let error):
+                    self?.view?.present(error: error)
                 }
             }
         })

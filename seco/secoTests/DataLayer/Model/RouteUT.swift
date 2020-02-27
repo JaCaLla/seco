@@ -40,9 +40,9 @@ class RouteUT: XCTestCase {
             return
         }
         XCTAssertEqual(route.points[0], Point(latitude: 41.38074, longitude: 2.18594))
-        XCTAssertEqual(route.points[1], Point(latitude: 1.111, longitude: 2.2222))
-        XCTAssertEqual(route.points[2], Point(latitude: 3.333, longitude: 4.4444))
-        XCTAssertEqual(route.points[3], Point(latitude: 5.555, longitude: 6.6666))
+        XCTAssertEqual(route.points[1], Point(latitude: 1.111, longitude: 2.2222, stopId: 12))
+        XCTAssertEqual(route.points[2], Point(latitude: 3.333, longitude: 4.4444, stopId: 34))
+        XCTAssertEqual(route.points[3], Point(latitude: 5.555, longitude: 6.6666, stopId: 56))
         XCTAssertEqual(route.points[4], Point(latitude: 45.38074, longitude: 4.18594))
         
     }

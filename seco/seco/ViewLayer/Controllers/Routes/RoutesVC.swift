@@ -13,6 +13,7 @@ protocol RoutesVCProtocol: AnyObject {
     func presentActivityIndicator()
     func removeActivityIndicator()
     func presentFetchedRoutes(routesVM: [RouteVM])
+    func presentPopUp(stopPointVM: StopPointVM)
     func present(error: Error)
 }
 
@@ -52,14 +53,27 @@ class RoutesVC: UIViewController {
     // MARK: - Private methods
     func setupViewController() {
         routeList.onSelect = { [weak self] routeVM in
-            guard let weakSelf = self else { return }
-            weakSelf.routeMap.set(routeVM: routeVM)
+            self?.routeMap.set(routeVM: routeVM)
+        }
+        routeMap.onSelectedStop = { [weak self] stopId in
+            self?.presenter.fetchStopPoint(stopId: stopId)
         }
     }
 }
 
 // MARK: - RoutesVCProtocol
 extension RoutesVC: RoutesVCProtocol {
+    func presentPopUp(stopPointVM: StopPointVM) {
+        
+        let alert = UIAlertController(title: stopPointVM.title,
+                                      message: stopPointVM.message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: R.string.localizable.alert_continue.key.localized,
+                                      style: UIAlertAction.Style.default,
+                                      handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     func presentActivityIndicator() {
         SVProgressHUD.setContainerView(self.view)

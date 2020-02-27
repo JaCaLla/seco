@@ -36,7 +36,7 @@ struct Route {
         points.append(Point(pointAPI: routeAPI.origin.point))
         points.append(contentsOf: routeAPI.stops.compactMap({
             guard let uwpPoint = $0.point else { return nil}
-            return Point(pointAPI: uwpPoint)
+            return Point(pointAPI: uwpPoint, stopId: $0.id)
         }))
         points.append(Point(pointAPI: routeAPI.destination.point))
         

@@ -13,7 +13,7 @@ struct RouteVM {
     var driverName: String
     var startEnd: String
     var originDestination: String
-    var annotations:[MKPointAnnotation]
+    var annotations:[CustomPointAnnotation]
     
     // MARK: - Constructor/Initializer
     init(route: Route) {
@@ -24,10 +24,19 @@ struct RouteVM {
             let location = CLLocation(latitude: $0.latitude, longitude: $0.longitude)
             let CLLCoordType = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
                                                       longitude: location.coordinate.longitude);
-            let anno = MKPointAnnotation();
-            anno.coordinate = CLLCoordType;
-            return anno
+            let pointAnnotation = CustomPointAnnotation();
+            pointAnnotation.stopId = $0.stopId
+            pointAnnotation.coordinate = CLLCoordType;
+            return pointAnnotation
         })
     }
 }
 
+
+class CustomPointAnnotation: MKPointAnnotation {
+    var stopId:Int!
+}
+
+class CustomMKAnnotationView : MKAnnotationView {
+    var stopId:Int!
+}

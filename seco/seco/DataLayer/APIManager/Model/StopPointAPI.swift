@@ -14,12 +14,13 @@ struct StopPointAPI: Codable {
     let address: String
     let tripID: Int
     let userName: String
-    let point: PointAPI
+    let pointAPI: PointAPI
     let price: Double
 
     enum CodingKeys: String, CodingKey {
         case stopTime, paid, address
         case tripID = "tripId"
-        case userName, point, price
+        case pointAPI = "point"
+        case userName, price
     }
 }

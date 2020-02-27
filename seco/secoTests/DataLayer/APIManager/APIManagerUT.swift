@@ -10,13 +10,6 @@ import XCTest
 @testable import seco
 class APIManagerUT: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
     // MARK: - Router
     func test_RouterAttributes() {
@@ -53,30 +46,38 @@ class APIManagerUT: XCTestCase {
     func test_getAllRoutes() {
         let asyncExpectation = expectation(description: "\(#function)")
 
-        APIManager().getAllRoutes(onSucceed: { routesAPI in
-            XCTAssertEqual(routesAPI.count, 7)
 
-            asyncExpectation.fulfill()
-        }, onFailed: { responseCode in
-            XCTAssertEqual(responseCode, ResponseCodeAPI.responseValidationFailed)
-            asyncExpectation.fulfill()
-        })
-        self.waitForExpectations(timeout: 5.0, handler: nil)
-    }
-
-    func test_getAllRoutes2() {
-        let asyncExpectation = expectation(description: "\(#function)")
-
-        
-        APIManager().getAllRoutes2 { (result) in
+        APIManager().getAllRoutes { (result) in
             switch result {
             case .success(let routesAPI):
                 XCTAssertEqual(routesAPI.count, 7)
             case .failure:
                 XCTFail()
-                
+
             }
-             asyncExpectation.fulfill()
+            asyncExpectation.fulfill()
+        }
+        self.waitForExpectations(timeout: 5.0, handler: nil)
+    }
+
+    func test_getStop() {
+        let asyncExpectation = expectation(description: "\(#function)")
+
+        APIManager().getStop(stopId: 1) { result in
+            switch result {
+            case .success(let stopPointAPI):
+                XCTAssertEqual(stopPointAPI.price, 1.5)
+                XCTAssertEqual(stopPointAPI.pointAPI, PointAPI(latitude: 41.37653, longitude: 2.17924))
+                XCTAssertEqual(stopPointAPI.stopTime, "2018-12-18T08:10:00.000Z")
+                XCTAssertEqual(stopPointAPI.paid, true)
+                XCTAssertEqual(stopPointAPI.address, "Ramblas, Barcelona")
+                XCTAssertEqual(stopPointAPI.tripID, 1)
+                XCTAssertEqual(stopPointAPI.userName, "Manuel Gomez")
+            case .failure:
+                XCTFail()
+
+            }
+            asyncExpectation.fulfill()
         }
         self.waitForExpectations(timeout: 5.0, handler: nil)
     }

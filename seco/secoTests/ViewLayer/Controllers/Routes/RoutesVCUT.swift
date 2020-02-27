@@ -23,7 +23,6 @@ class RoutesVCUT: XCTestCase {
         sut.loadViewIfNeeded()
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()
-        //_ = sut.view
     }
 
 
@@ -31,6 +30,7 @@ class RoutesVCUT: XCTestCase {
         XCTAssertNotNil(sut.presenter, "Presenter not initialized")
         XCTAssertEqual(presenter.setRoutesCalled, true)
         XCTAssertEqual(presenter.fetchRoutesCalled, true)
+        XCTAssertEqual(presenter.fetchStopPointCalled, false)
         
     }
 

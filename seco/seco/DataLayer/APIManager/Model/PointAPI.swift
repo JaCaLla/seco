@@ -17,3 +17,9 @@ struct PointAPI: Codable {
         case longitude = "_longitude"
     }
 }
+
+extension PointAPI: Equatable {
+    static func == (lhs: PointAPI, rhs: PointAPI) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}

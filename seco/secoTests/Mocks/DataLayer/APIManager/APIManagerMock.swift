@@ -10,18 +10,27 @@ import Foundation
 @testable import seco
 
 class APIManagerMock: APIManagerProtocol {
-    func getAllRoutes(onSucceed: @escaping (([RouteAPI]) -> Void), onFailed: @escaping ((ResponseCodeAPI) -> Void)) {
 
+    func getStop(stopId: Int, onComplete: @escaping (Result<StopPointAPI, Error>) -> Void) {
+        let stopPointAPI = StopPointAPI(stopTime: "2018-12-18T09:00:00.000Z",
+                                        paid: true,
+                                        address: "",
+                                        tripID: 3,
+                                        userName: "Manuel Gomez",
+                                        pointAPI: PointAPI(latitude: 12.23, longitude: 4.32),
+                                        price: 12.22)
+        
+        onComplete(.success(stopPointAPI))
     }
 
-    func getAllRoutes2(onComplete: @escaping (Result<([RouteAPI]), Error>) -> Void) {
+    func getAllRoutes(onComplete: @escaping (Result<([RouteAPI]), Error>) -> Void) {
 
         let routeAPI = RouteAPI(status: "ongoing",
                                 origin: OriginDestinationAPI(address: "Barcelona",
-                                                    point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
+                                                             point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
                                 stops: [],
                                 destination: OriginDestinationAPI(address: "Martorell",
-                                                         point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
+                                                                  point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
                                 endTime: "2018-12-18T09:00:00.000Z",
                                 startTime: "2018-12-18T08:00:00.000Z",
                                 description: "Barcelona a Martorell",

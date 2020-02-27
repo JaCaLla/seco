@@ -14,6 +14,7 @@ class RoutesVCMock: RoutesVCProtocol {
     var removeActivityIndicatorCalled: Bool = false
     var presentFetchedRoutesCalled: Bool = false
     var presentCalled: Bool = false
+    var presentPopUpCalled: Bool = false
     
     func presentActivityIndicator() {
         presentActivityIndicatorCalled = true
@@ -31,5 +32,8 @@ class RoutesVCMock: RoutesVCProtocol {
         presentCalled = true
     }
     
+    func presentPopUp(stopPointVM: StopPointVM) {
+        presentPopUpCalled = true
+    }
     
 }

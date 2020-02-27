@@ -11,10 +11,8 @@ import Alamofire
 
 protocol APIManagerProtocol {
 
-    func getAllRoutes(onSucceed: @escaping (([RouteAPI]) -> Void),
-                      onFailed: @escaping ((ResponseCodeAPI) -> Void))
-
-    func getAllRoutes2(onComplete: @escaping (Swift.Result<([RouteAPI]), Error>) -> Void)
+    func getAllRoutes(onComplete: @escaping (Swift.Result<([RouteAPI]), Error>) -> Void)
+    func getStop(stopId: Int, onComplete: @escaping (Swift.Result<StopPointAPI, Error>) -> Void)
 }
 
 class APIManager {
@@ -24,7 +22,7 @@ class APIManager {
 
         case routes
         case stop(Int)
-        
+
         static let host = "europe-west1-metropolis-fe-test.cloudfunctions.net"
         static let scheme = "https"
         static let baseURLString = scheme + "://" + host
@@ -36,14 +34,12 @@ class APIManager {
             }
         }
 
-
         var path: String {
             switch self {
             case .routes: return "api/trips"
             case .stop (let identifier): return "api/stops/\(identifier)"
             }
         }
-
 
         func resolveURLRequest() -> URLRequest {
 
@@ -88,14 +84,34 @@ class APIManager {
 
 // MARK: - APIManagerProtocol
 extension APIManager: APIManagerProtocol {
-    func getAllRoutes2(onComplete: @escaping (Swift.Result<([RouteAPI]), Error>) -> Void) {
-        Alamofire.request(APIRouter.routes).validate(statusCode: 200..<401).responseJSON { response in
+
+    func getAllRoutes(onComplete: @escaping (Swift.Result<([RouteAPI]), Error>) -> Void) {
+        processRequest(apiRouter: APIRouter.routes, onComplete: onComplete)
+    }
+
+    func getStop(stopId: Int, onComplete: @escaping (Swift.Result<StopPointAPI, Error>) -> Void) {
+        processRequest(apiRouter: APIRouter.stop(stopId), onComplete: onComplete)
+    }
+
+    private func processRequest<T: Codable>(apiRouter: APIRouter, onComplete: @escaping (Swift.Result<(T), Error>) -> Void) {
+        Alamofire.request(apiRouter).validate(statusCode: 200..<401).responseJSON { response in
             switch response.result {
             case .success:
                 if let resultValue = response.result.value as? [[String: AnyObject]] {
                     do {
                         let jsonData = try JSONSerialization.data(withJSONObject: resultValue, options: [])
-                        let rateAPIArr = try JSONDecoder().decode([RouteAPI].self, from: jsonData)
+                        let rateAPIArr = try JSONDecoder().decode(T.self, from: jsonData)
+                        onComplete(.success(rateAPIArr))
+                    } catch {
+                        let error = NSError(domain: "Domain",
+                                            code: ResponseCodeAPI.badFormedJSONModel.rawValue,
+                                            userInfo: [:])
+                        onComplete(.failure(error))
+                    }
+                } else if let resultValue = response.result.value as? [String: AnyObject] {
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: resultValue, options: [])
+                        let rateAPIArr = try JSONDecoder().decode(T.self, from: jsonData)
                         onComplete(.success(rateAPIArr))
                     } catch {
                         let error = NSError(domain: "Domain",
@@ -111,29 +127,6 @@ extension APIManager: APIManagerProtocol {
                 }
             case .failure (let error):
                 onComplete(.failure(error))
-            }
-        }
-    }
-
-    func getAllRoutes(onSucceed: @escaping (([RouteAPI]) -> Void),
-                      onFailed: @escaping ((ResponseCodeAPI) -> Void)) {
-
-        Alamofire.request(APIRouter.routes).validate(statusCode: 200..<401).responseJSON { response in
-            switch response.result {
-            case .success:
-                if let resultValue = response.result.value as? [[String: AnyObject]] {
-                    do {
-                        let jsonData = try JSONSerialization.data(withJSONObject: resultValue, options: [])
-                        let rateAPIArr = try JSONDecoder().decode([RouteAPI].self, from: jsonData)
-                        onSucceed(rateAPIArr)
-                    } catch {
-                        onFailed(ResponseCodeAPI.badFormedJSONModel)
-                    }
-                } else {
-                    onFailed(ResponseCodeAPI.missingResponseResultValue)
-                }
-            case .failure:
-                onFailed(ResponseCodeAPI.connectivityError)
             }
         }
     }

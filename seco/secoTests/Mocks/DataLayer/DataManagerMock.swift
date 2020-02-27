@@ -10,8 +10,16 @@ import Foundation
 @testable import seco
 
 class DataManagerMock: DataManagerProtocol {
+    
+    func getStop(stopId: Int, onComplete: @escaping (Result<StopPoint, Error>) -> Void) {
+        let stopPoint = StopPoint(stopTime: "2018-12-18T09:00:00.000Z",
+                                  paid: false,
+                                  userName: "Manuel Gomez")
+        onComplete(.success(stopPoint))
+    }
+    
 
-    func getAllRoutes2(onComplete: @escaping (Result<([Route]), Error>) -> Void) {
+    func getAllRoutes(onComplete: @escaping (Result<([Route]), Error>) -> Void) {
         let routes = [Route(driverName: "Alberto Morales",
                             originAddress: "Barcelona",
                             destinationAddress: "Martorell",
