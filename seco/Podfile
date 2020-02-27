@@ -5,7 +5,10 @@ target 'seco' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-   # Pods for resources
+  # Pods for UI
+  pod 'SVProgressHUD'
+  
+  # Pods for resources
   pod 'R.swift', '~> 5.0.3'
 
   # Pods for Networking
