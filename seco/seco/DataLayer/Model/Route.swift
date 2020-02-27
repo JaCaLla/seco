@@ -14,25 +14,37 @@ struct Route {
     let destinationAddress: String
     let endTime: String
     let startTime: String
+    let points: [Point]
 
     // MARK: - Constructor/initializer
     init(driverName: String,
          originAddress: String,
          destinationAddress: String,
          startTime: String,
-         endTime: String) {
+         endTime: String,
+         points: [Point]) {
         self.driverName = driverName
         self.originAddress = originAddress
         self.destinationAddress = destinationAddress
         self.endTime = endTime
         self.startTime = startTime
+        self.points = points
     }
 
     init(routeAPI: RouteAPI) {
+        var points: [Point] = []
+        points.append(Point(pointAPI: routeAPI.origin.point))
+        points.append(contentsOf: routeAPI.stops.compactMap({
+            guard let uwpPoint = $0.point else { return nil}
+            return Point(pointAPI: uwpPoint)
+        }))
+        points.append(Point(pointAPI: routeAPI.destination.point))
+        
         self.init(driverName: routeAPI.driverName,
                   originAddress: routeAPI.origin.address,
                   destinationAddress: routeAPI.destination.address,
                   startTime: routeAPI.startTime,
-                  endTime: routeAPI.endTime)
+                  endTime: routeAPI.endTime,
+                  points: points)
     }
 }

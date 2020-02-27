@@ -16,7 +16,8 @@ class RouteVMUT: XCTestCase {
         originAddress: "Barcelona",
         destinationAddress: "Martorell",
         startTime: "2018-12-18T08:00:00.000Z",
-        endTime: "2018-12-18T09:00:00.000Z")
+        endTime: "2018-12-18T09:00:00.000Z",
+        points: [])
         // When
         let routeVM = RouteVM(route: route)
         //Then

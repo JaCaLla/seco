@@ -61,7 +61,7 @@ class APIManagerUT: XCTestCase {
             XCTAssertEqual(responseCode, ResponseCodeAPI.responseValidationFailed)
             asyncExpectation.fulfill()
         })
-        self.waitForExpectations(timeout: 4.0, handler: nil)
+        self.waitForExpectations(timeout: 5.0, handler: nil)
     }
 
     func test_getAllRoutes2() {
@@ -78,6 +78,6 @@ class APIManagerUT: XCTestCase {
             }
              asyncExpectation.fulfill()
         }
-        self.waitForExpectations(timeout: 4.0, handler: nil)
+        self.waitForExpectations(timeout: 5.0, handler: nil)
     }
 }

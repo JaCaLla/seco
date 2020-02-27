@@ -13,10 +13,15 @@ class RouteUT: XCTestCase {
 
     func test_initializerWhenRouteAPI() {
         // Given
+        let stopsAPI = [Stop(point: PointAPI(latitude: 1.111, longitude: 2.2222), id: 12),
+                        Stop(point: PointAPI(latitude: 3.333, longitude: 4.4444), id: 34),
+                        Stop(point: PointAPI(latitude: 5.555, longitude: 6.6666), id: 56)
+        ]
+
         let routeAPI = RouteAPI(status: "ongoing",
-                                origin: Destination(address: "Barcelona", point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
-                                stops: [],
-                                destination: Destination(address: "Martorell", point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
+                                origin: OriginDestinationAPI(address: "Barcelona", point: PointAPI(latitude: 41.38074, longitude: 2.18594)),
+                                stops: stopsAPI,
+                                destination: OriginDestinationAPI(address: "Martorell", point: PointAPI(latitude: 45.38074, longitude: 4.18594)),
                                 endTime: "2018-12-18T09:00:00.000Z",
                                 startTime: "2018-12-18T08:00:00.000Z",
                                 description: "Barcelona a Martorell",
@@ -30,6 +35,16 @@ class RouteUT: XCTestCase {
         XCTAssertEqual(route.destinationAddress, "Martorell")
         XCTAssertEqual(route.startTime, "2018-12-18T08:00:00.000Z")
         XCTAssertEqual(route.endTime, "2018-12-18T09:00:00.000Z")
+        guard route.points.count == 5 else {
+            XCTFail()
+            return
+        }
+        XCTAssertEqual(route.points[0], Point(latitude: 41.38074, longitude: 2.18594))
+        XCTAssertEqual(route.points[1], Point(latitude: 1.111, longitude: 2.2222))
+        XCTAssertEqual(route.points[2], Point(latitude: 3.333, longitude: 4.4444))
+        XCTAssertEqual(route.points[3], Point(latitude: 5.555, longitude: 6.6666))
+        XCTAssertEqual(route.points[4], Point(latitude: 45.38074, longitude: 4.18594))
+        
     }
 
 }

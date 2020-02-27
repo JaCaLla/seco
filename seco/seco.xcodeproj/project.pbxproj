@@ -29,6 +29,9 @@
 		5E84265C24079FEF00B71563 /* RouteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84265B24079FEF00B71563 /* RouteListCell.swift */; };
 		5E84265E2407A5BD00B71563 /* RouteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84265D2407A5BD00B71563 /* RouteVM.swift */; };
 		5E8426602407A70600B71563 /* RouteVMUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84265F2407A70600B71563 /* RouteVMUT.swift */; };
+		5E8426692407DF6D00B71563 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8426682407DF6D00B71563 /* Point.swift */; };
+		5E84266B2407E1AD00B71563 /* PointUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84266A2407E1AD00B71563 /* PointUT.swift */; };
+		5E84266D2407F78400B71563 /* RouteMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E84266C2407F78400B71563 /* RouteMap.swift */; };
 		5E8E1C672407145E0051EAF6 /* RoutesVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C662407145E0051EAF6 /* RoutesVCMock.swift */; };
 		5E8E1C6C240718760051EAF6 /* RoutesVCUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6B240718760051EAF6 /* RoutesVCUT.swift */; };
 		5E8E1C6E240722830051EAF6 /* RoutesPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */; };
@@ -86,6 +89,9 @@
 		5E84265B24079FEF00B71563 /* RouteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListCell.swift; sourceTree = "<group>"; };
 		5E84265D2407A5BD00B71563 /* RouteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteVM.swift; sourceTree = "<group>"; };
 		5E84265F2407A70600B71563 /* RouteVMUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteVMUT.swift; sourceTree = "<group>"; };
+		5E8426682407DF6D00B71563 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		5E84266A2407E1AD00B71563 /* PointUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointUT.swift; sourceTree = "<group>"; };
+		5E84266C2407F78400B71563 /* RouteMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMap.swift; sourceTree = "<group>"; };
 		5E8E1C662407145E0051EAF6 /* RoutesVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesVCMock.swift; sourceTree = "<group>"; };
 		5E8E1C6B240718760051EAF6 /* RoutesVCUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesVCUT.swift; sourceTree = "<group>"; };
 		5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenterUT.swift; sourceTree = "<group>"; };
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6834E92405BAF9001631FD /* Route.swift */,
+				5E8426682407DF6D00B71563 /* Point.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6834EB2405BEBC001631FD /* RouteUT.swift */,
+				5E84266A2407E1AD00B71563 /* PointUT.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6834FA2405D976001631FD /* RouteList.swift */,
+				5E84266C2407F78400B71563 /* RouteMap.swift */,
 				5E84265B24079FEF00B71563 /* RouteListCell.swift */,
 				5E84265D2407A5BD00B71563 /* RouteVM.swift */,
 			);
@@ -673,6 +682,8 @@
 				5EC550742406A5290073AD6A /* PresentMainAppOperation.swift in Sources */,
 				5E7A06D9240511BD00157138 /* StopPointAPI.swift in Sources */,
 				5EC5507B2406A7AD0073AD6A /* UIApplicationExtension.swift in Sources */,
+				5E8426692407DF6D00B71563 /* Point.swift in Sources */,
+				5E84266D2407F78400B71563 /* RouteMap.swift in Sources */,
 				5E7A06D72405108800157138 /* PointAPI.swift in Sources */,
 				5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */,
 				5E70DEF623FF22DF00ACC2C7 /* R.generated.swift in Sources */,
@@ -689,6 +700,7 @@
 				5EC550832406ADD10073AD6A /* RoutesInteractorUT.swift in Sources */,
 				5E8E1C73240725810051EAF6 /* RoutesInteractor.swift in Sources */,
 				5E6834F12405CA23001631FD /* APIManagerMock.swift in Sources */,
+				5E84266B2407E1AD00B71563 /* PointUT.swift in Sources */,
 				5E8E1C70240723A70051EAF6 /* RoutesPresenterMock.swift in Sources */,
 				5E8E1C672407145E0051EAF6 /* RoutesVCMock.swift in Sources */,
 				5E6CDE49240482EA000B4EE8 /* APIManagerUT.swift in Sources */,
@@ -848,6 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
 				INFOPLIST_FILE = seco/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -866,6 +879,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7ZPDPWR8XU;
 				INFOPLIST_FILE = seco/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-iS-FXs" customClass="RouteList" customModule="seco" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="272" width="414" height="590"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RouteListCell" rowHeight="100" id="imR-7r-82L" customClass="RouteListCell" customModule="seco" customModuleProvider="target">
@@ -66,18 +66,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ayj-wl-KRe" customClass="RouteMap" customModule="seco" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="228" id="aTa-1x-Xn0"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dS8-iS-FXs" secondAttribute="bottom" id="0f9-kQ-TB8"/>
+                            <constraint firstItem="Ayj-wl-KRe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2lI-tN-3lF"/>
+                            <constraint firstItem="Ayj-wl-KRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9zb-8U-shL"/>
+                            <constraint firstItem="dS8-iS-FXs" firstAttribute="top" secondItem="Ayj-wl-KRe" secondAttribute="bottom" id="Su7-Cr-Z3Y"/>
+                            <constraint firstItem="Ayj-wl-KRe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TOC-rN-XBM"/>
                             <constraint firstItem="dS8-iS-FXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UHH-Qe-SN6"/>
-                            <constraint firstItem="dS8-iS-FXs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YFm-7f-7Nq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dS8-iS-FXs" secondAttribute="trailing" id="hTX-1g-bWW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="routeList" destination="dS8-iS-FXs" id="Xqw-wD-Gw8"/>
+                        <outlet property="routeMap" destination="Ayj-wl-KRe" id="1EI-PL-OKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

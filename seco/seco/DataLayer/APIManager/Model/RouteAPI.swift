@@ -10,9 +10,9 @@ import Foundation
 
 struct RouteAPI: Codable {
     let status: String
-    let origin: Destination
+    let origin: OriginDestinationAPI
     let stops: [Stop]
-    let destination: Destination
+    let destination: OriginDestinationAPI
     let endTime, startTime, description, driverName: String
     let route: String
 
@@ -23,7 +23,7 @@ struct RouteAPI: Codable {
 }
 
 // MARK: - Destination
-struct Destination: Codable {
+struct OriginDestinationAPI: Codable {
     let address: String
     let point: PointAPI
 }

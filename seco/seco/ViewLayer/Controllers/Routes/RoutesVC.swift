@@ -20,6 +20,7 @@ class RoutesVC: UIViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var routeList: RouteList!
+    @IBOutlet weak var routeMap: RouteMap!
     
     // MARK: - Private attributes
     var presenter: RoutesPresenterProtocol = RoutesPresenter()
@@ -50,7 +51,10 @@ class RoutesVC: UIViewController {
     
     // MARK: - Private methods
     func setupViewController() {
-        
+        routeList.onSelect = { [weak self] routeVM in
+            guard let weakSelf = self else { return }
+            weakSelf.routeMap.set(routeVM: routeVM)
+        }
     }
 }
 

@@ -10,6 +10,9 @@ import UIKit
 
 class RouteList: UITableView {
     
+    // MARK: - Callbacks
+    var onSelect: (RouteVM) -> Void = { _ in /* Default empty block */}
+    
     // MARK: - Private attributes
     private var routesVM:[RouteVM] = []
 
@@ -28,6 +31,7 @@ class RouteList: UITableView {
     // MARK: - Private methdos
     func setupView() {
         dataSource = self
+        delegate = self
         self.tableFooterView = UIView()
     }
 }
@@ -44,6 +48,10 @@ extension RouteList: UITableViewDataSource {
         routeListCell.set(routeVM: self.routesVM[indexPath.row])
         return routeListCell
     }
-    
-    
+}
+
+extension RouteList: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.onSelect(self.routesVM[indexPath.row])
+    }
 }
