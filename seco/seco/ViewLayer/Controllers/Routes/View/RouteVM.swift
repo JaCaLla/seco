@@ -10,6 +10,7 @@ import Foundation
 import MapKit
 
 struct RouteVM {
+    var route: String
     var driverName: String
     var startEnd: String
     var originDestination: String
@@ -17,6 +18,7 @@ struct RouteVM {
     
     // MARK: - Constructor/Initializer
     init(route: Route) {
+        self.route = route.route
         self.driverName = route.driverName
         self.startEnd = "\(route.startTime) - \(route.endTime)"
         self.originDestination = "\(route.originAddress) - \(route.destinationAddress)"

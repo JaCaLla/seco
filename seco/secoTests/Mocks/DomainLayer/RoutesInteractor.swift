@@ -13,9 +13,12 @@ class RoutesInteractorMock: RoutesInteractorProtocol {
     
     var getAllRoutesCalled: Bool = false
     var getStopCalled: Bool = false
+    var getIssueCalled: Bool = false
+    var createCalled: Bool = false
 
     var routes: [Route]?
     var stopPoint: StopPoint?
+    var issue: Issue?
 
     func getAllRoutes(onComplete: @escaping (Result<([Route]), Error>) -> Void) {
         getAllRoutesCalled = true
@@ -45,13 +48,14 @@ class RoutesInteractorMock: RoutesInteractorProtocol {
         onComplete(.success(uwpStopPoint))
     }
 
+    func getIssue(route: String, onComplete: @escaping (Issue?) -> Void) {
+        getIssueCalled = true
+         onComplete(issue)
+     }
+    
+    func create(issue: Issue, onComplete: @escaping () -> Void) {
+        createCalled = true
+        onComplete()
+    }
 }
 
-/*
-let routes:[Route] = [ Route(driverName: "Alberto Morales",
-                             originAddress: "Barcelona",
-                             destinationAddress: "Martorell",
-                             startTime: "2018-12-18T08:00:00.000Z",
-                             endTime: "2018-12-18T09:00:00.000Z")
-]
-*/

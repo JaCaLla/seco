@@ -12,6 +12,7 @@ protocol RoutesPresenterProtocol {
     func set(routesVC: RoutesVCProtocol)
     func fetchRoutes()
     func fetchStopPoint(stopId: Int)
+    func fetchIssue(route: String)
 }
 
 class RoutesPresenter {
@@ -47,7 +48,7 @@ extension RoutesPresenter: RoutesPresenterProtocol {
             }
         })
     }
-    
+
     func fetchStopPoint(stopId: Int) {
         self.view?.presentActivityIndicator()
         self.interactor.getStop(stopId: stopId, onComplete: { [weak self] result in
@@ -56,9 +57,26 @@ extension RoutesPresenter: RoutesPresenterProtocol {
                 switch result {
                 case .success(let stopPoint):
                     self?.view?.presentPopUp(stopPointVM: StopPointVM(stopPoint: stopPoint))
-                case .failure( let error):
+                case .failure(let error):
                     self?.view?.present(error: error)
                 }
+            }
+        })
+    }
+
+    func fetchIssue(route: String) {
+        self.view?.presentActivityIndicator()
+        self.interactor.getIssue(route: route, onComplete: { [weak self] issue in
+            DispatchQueue.main.async {
+                self?.view?.removeActivityIndicator()
+                let uwpIssue = Issue(route: route,
+                                     name: issue?.name ?? "",
+                                     surename: issue?.surename ?? "",
+                                     email: issue?.email ?? "",
+                                     timestamp: issue?.timestamp ?? -1,
+                                     report: issue?.report ?? "",
+                                     phone: issue?.phone ?? "")
+                self?.view?.onGetIssue(issue: uwpIssue)
             }
         })
     }

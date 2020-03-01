@@ -2,4 +2,13 @@
 "routes_paid" = "Paid";
 "routes_not_paid" = "Not Paid";
 "alert_continue" = "Continue";
+"issue_name" = "Name";
+"issue_surename" = "Surename";
+"issue_email" = "Email";
+"issue_phone" = "Phone";
+"issue_report" = "Report";
+"issue_save" = "SAVE";
+"issue_timestamp" = "Timestamp";
+"issue_alert_title" = "Look out!";
+"issue_alert_message" = "Name, Surename and email are mandatory!\n Report maximum length is 200! \n... check email format";
 

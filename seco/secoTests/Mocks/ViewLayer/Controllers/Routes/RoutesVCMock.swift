@@ -9,12 +9,14 @@
 import Foundation
 @testable import seco
 class RoutesVCMock: RoutesVCProtocol {
+ 
 
     var presentActivityIndicatorCalled: Bool = false
     var removeActivityIndicatorCalled: Bool = false
     var presentFetchedRoutesCalled: Bool = false
     var presentCalled: Bool = false
     var presentPopUpCalled: Bool = false
+    var onGetIssue: Bool = false
     
     func presentActivityIndicator() {
         presentActivityIndicatorCalled = true
@@ -35,5 +37,9 @@ class RoutesVCMock: RoutesVCProtocol {
     func presentPopUp(stopPointVM: StopPointVM) {
         presentPopUpCalled = true
     }
+    
+    func onGetIssue(issue: Issue) {
+         onGetIssue = true
+     }
     
 }

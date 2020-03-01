@@ -8,6 +8,9 @@ target 'seco' do
   # Pods for UI
   pod 'SVProgressHUD'
   
+  # Pod for persistence
+  pod 'RealmSwift'
+  
   # Pods for resources
   pod 'R.swift', '~> 5.0.3'
 

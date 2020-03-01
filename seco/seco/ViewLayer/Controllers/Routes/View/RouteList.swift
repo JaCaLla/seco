@@ -12,6 +12,7 @@ class RouteList: UITableView {
     
     // MARK: - Callbacks
     var onSelect: (RouteVM) -> Void = { _ in /* Default empty block */}
+    var onGetIssue: (RouteVM) -> Void = { _ in /* Default empty block */ }
     
     // MARK: - Private attributes
     private var routesVM:[RouteVM] = []
@@ -46,6 +47,10 @@ extension RouteList: UITableViewDataSource {
             return UITableViewCell()
         }
         routeListCell.set(routeVM: self.routesVM[indexPath.row])
+        routeListCell.onGetIssue = { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.onGetIssue(weakSelf.routesVM[indexPath.row])
+        }
         return routeListCell
     }
 }

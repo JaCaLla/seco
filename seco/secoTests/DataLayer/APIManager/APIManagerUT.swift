@@ -57,7 +57,7 @@ class APIManagerUT: XCTestCase {
             }
             asyncExpectation.fulfill()
         }
-        self.waitForExpectations(timeout: 5.0, handler: nil)
+        self.waitForExpectations(timeout: 10.0, handler: nil)
     }
 
     func test_getStop() {
@@ -79,6 +79,6 @@ class APIManagerUT: XCTestCase {
             }
             asyncExpectation.fulfill()
         }
-        self.waitForExpectations(timeout: 5.0, handler: nil)
+        self.waitForExpectations(timeout: 10.0, handler: nil)
     }
 }

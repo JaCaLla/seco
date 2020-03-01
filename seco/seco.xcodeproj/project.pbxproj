@@ -42,6 +42,28 @@
 		5E8E1C6E240722830051EAF6 /* RoutesPresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */; };
 		5E8E1C70240723A70051EAF6 /* RoutesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C6F240723A70051EAF6 /* RoutesPresenterMock.swift */; };
 		5E8E1C73240725810051EAF6 /* RoutesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E1C72240725810051EAF6 /* RoutesInteractor.swift */; };
+		5EA9DE3924097F4D00B78B7A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE3824097F4D00B78B7A /* DBManager.swift */; };
+		5EA9DE3B240996FE00B78B7A /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE3A240996FE00B78B7A /* RealmConfig.swift */; };
+		5EA9DE3E24099A7B00B78B7A /* DBManagerUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE3D24099A7B00B78B7A /* DBManagerUT.swift */; };
+		5EA9DE442409A48E00B78B7A /* IssueDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE432409A48E00B78B7A /* IssueDB.swift */; };
+		5EA9DE462409CFA400B78B7A /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE452409CFA400B78B7A /* Issue.swift */; };
+		5EA9DE482409D14E00B78B7A /* IssueUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE472409D14E00B78B7A /* IssueUT.swift */; };
+		5EA9DE4B240A36CA00B78B7A /* IssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE4A240A36CA00B78B7A /* IssueVC.swift */; };
+		5EA9DE4D240A374600B78B7A /* IssuePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE4C240A374600B78B7A /* IssuePresenter.swift */; };
+		5EA9DE50240A66C100B78B7A /* AttributeIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE4F240A66C100B78B7A /* AttributeIssueTVC.swift */; };
+		5EA9DE52240A676400B78B7A /* IssueVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE51240A676400B78B7A /* IssueVM.swift */; };
+		5EA9DE55240A685800B78B7A /* IssueVMUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE54240A685800B78B7A /* IssueVMUT.swift */; };
+		5EA9DE57240A6BF800B78B7A /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE56240A6BF800B78B7A /* IssueView.swift */; };
+		5EA9DE59240A79F800B78B7A /* ActionIssueTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE58240A79F800B78B7A /* ActionIssueTVC.swift */; };
+		5EA9DE5C240A7CBF00B78B7A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE5B240A7CBF00B78B7A /* AppColors.swift */; };
+		5EA9DE61240AFA3D00B78B7A /* IssueDBUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE60240AFA3D00B78B7A /* IssueDBUT.swift */; };
+		5EA9DE66240B057E00B78B7A /* IssuePresenterUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE65240B057E00B78B7A /* IssuePresenterUT.swift */; };
+		5EA9DE69240B05F700B78B7A /* IssueVCMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE68240B05F700B78B7A /* IssueVCMock.swift */; };
+		5EA9DE6B240B067C00B78B7A /* IssuePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE6A240B067C00B78B7A /* IssuePresenterMock.swift */; };
+		5EA9DE6D240B21E600B78B7A /* DateSelectorTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE6C240B21E600B78B7A /* DateSelectorTVC.swift */; };
+		5EA9DE6F240BA73900B78B7A /* ReportTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE6E240BA73900B78B7A /* ReportTVC.swift */; };
+		5EA9DE74240BC4C000B78B7A /* RequestNotificationPermissionOp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE73240BC4C000B78B7A /* RequestNotificationPermissionOp.swift */; };
+		5EA9DE76240BCACA00B78B7A /* AttributeIssueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9DE75240BCACA00B78B7A /* AttributeIssueType.swift */; };
 		5EC5506B24069FF20073AD6A /* RoutesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5506A24069FF20073AD6A /* RoutesPresenter.swift */; };
 		5EC5506F2406A5110073AD6A /* StartUpAppSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC5506E2406A5110073AD6A /* StartUpAppSequencer.swift */; };
 		5EC550732406A5290073AD6A /* ConcurrentOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC550712406A5290073AD6A /* ConcurrentOperation.swift */; };
@@ -107,6 +129,28 @@
 		5E8E1C6D240722830051EAF6 /* RoutesPresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenterUT.swift; sourceTree = "<group>"; };
 		5E8E1C6F240723A70051EAF6 /* RoutesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenterMock.swift; sourceTree = "<group>"; };
 		5E8E1C72240725810051EAF6 /* RoutesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesInteractor.swift; sourceTree = "<group>"; };
+		5EA9DE3824097F4D00B78B7A /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		5EA9DE3A240996FE00B78B7A /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
+		5EA9DE3D24099A7B00B78B7A /* DBManagerUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManagerUT.swift; sourceTree = "<group>"; };
+		5EA9DE432409A48E00B78B7A /* IssueDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueDB.swift; sourceTree = "<group>"; };
+		5EA9DE452409CFA400B78B7A /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		5EA9DE472409D14E00B78B7A /* IssueUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueUT.swift; sourceTree = "<group>"; };
+		5EA9DE4A240A36CA00B78B7A /* IssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVC.swift; sourceTree = "<group>"; };
+		5EA9DE4C240A374600B78B7A /* IssuePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenter.swift; sourceTree = "<group>"; };
+		5EA9DE4F240A66C100B78B7A /* AttributeIssueTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeIssueTVC.swift; sourceTree = "<group>"; };
+		5EA9DE51240A676400B78B7A /* IssueVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVM.swift; sourceTree = "<group>"; };
+		5EA9DE54240A685800B78B7A /* IssueVMUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVMUT.swift; sourceTree = "<group>"; };
+		5EA9DE56240A6BF800B78B7A /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		5EA9DE58240A79F800B78B7A /* ActionIssueTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionIssueTVC.swift; sourceTree = "<group>"; };
+		5EA9DE5B240A7CBF00B78B7A /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		5EA9DE60240AFA3D00B78B7A /* IssueDBUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDBUT.swift; sourceTree = "<group>"; };
+		5EA9DE65240B057E00B78B7A /* IssuePresenterUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenterUT.swift; sourceTree = "<group>"; };
+		5EA9DE68240B05F700B78B7A /* IssueVCMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueVCMock.swift; sourceTree = "<group>"; };
+		5EA9DE6A240B067C00B78B7A /* IssuePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenterMock.swift; sourceTree = "<group>"; };
+		5EA9DE6C240B21E600B78B7A /* DateSelectorTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorTVC.swift; sourceTree = "<group>"; };
+		5EA9DE6E240BA73900B78B7A /* ReportTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
+		5EA9DE73240BC4C000B78B7A /* RequestNotificationPermissionOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermissionOp.swift; sourceTree = "<group>"; };
+		5EA9DE75240BCACA00B78B7A /* AttributeIssueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueType.swift; sourceTree = "<group>"; };
 		5EC5506A24069FF20073AD6A /* RoutesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenter.swift; sourceTree = "<group>"; };
 		5EC5506E2406A5110073AD6A /* StartUpAppSequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartUpAppSequencer.swift; sourceTree = "<group>"; };
 		5EC550712406A5290073AD6A /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
@@ -155,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6834E92405BAF9001631FD /* Route.swift */,
+				5EA9DE452409CFA400B78B7A /* Issue.swift */,
 				5E8426682407DF6D00B71563 /* Point.swift */,
 				5E8C86DB2408435E0007CF6E /* StopPoint.swift */,
 			);
@@ -192,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6834EB2405BEBC001631FD /* RouteUT.swift */,
+				5EA9DE472409D14E00B78B7A /* IssueUT.swift */,
 				5E84266A2407E1AD00B71563 /* PointUT.swift */,
 				5E8C86DD240845870007CF6E /* StopPointUT.swift */,
 			);
@@ -232,6 +278,7 @@
 		5E6CDE4224047F6E000B4EE8 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE3724097F2D00B78B7A /* DBManager */,
 				5E6834E82405BADC001631FD /* Model */,
 				5E6834E62405B9AF001631FD /* DataManager.swift */,
 				5E6CDE4324047F79000B4EE8 /* APIManager */,
@@ -252,6 +299,7 @@
 		5E6CDE46240482B5000B4EE8 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE3C240999B400B78B7A /* DBManager */,
 				5E6834F32405CBA6001631FD /* DataManagerUT.swift */,
 				5E6834F22405CB76001631FD /* Model */,
 				5E6CDE47240482BD000B4EE8 /* APIManager */,
@@ -336,6 +384,7 @@
 		5E70DEF323FF20BF00ACC2C7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE5A240A7CAC00B78B7A /* Styles */,
 				5E70DED823FF1FC800ACC2C7 /* Assets.xcassets */,
 				5E8C86E12408535D0007CF6E /* Localizable.strings */,
 				5E70DEF423FF20CE00ACC2C7 /* R.Swift */,
@@ -362,6 +411,7 @@
 		5E8E1C64240713250051EAF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE67240B05C900B78B7A /* Issue */,
 				5E8E1C65240714110051EAF6 /* Routes */,
 			);
 			path = Controllers;
@@ -387,6 +437,7 @@
 		5E8E1C692407180D0051EAF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE53240A683100B78B7A /* Issue */,
 				5E8E1C6A2407181D0051EAF6 /* Routes */,
 			);
 			path = Controllers;
@@ -408,6 +459,91 @@
 				5E8E1C72240725810051EAF6 /* RoutesInteractor.swift */,
 			);
 			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		5EA9DE3724097F2D00B78B7A /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE3F24099BC900B78B7A /* Model */,
+				5EA9DE3824097F4D00B78B7A /* DBManager.swift */,
+				5EA9DE3A240996FE00B78B7A /* RealmConfig.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		5EA9DE3C240999B400B78B7A /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE5F240AFA1300B78B7A /* Model */,
+				5EA9DE3D24099A7B00B78B7A /* DBManagerUT.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		5EA9DE3F24099BC900B78B7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE432409A48E00B78B7A /* IssueDB.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EA9DE49240A36A300B78B7A /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE4E240A668100B78B7A /* View */,
+				5EA9DE4A240A36CA00B78B7A /* IssueVC.swift */,
+				5EA9DE4C240A374600B78B7A /* IssuePresenter.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		5EA9DE4E240A668100B78B7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE4F240A66C100B78B7A /* AttributeIssueTVC.swift */,
+				5EA9DE75240BCACA00B78B7A /* AttributeIssueType.swift */,
+				5EA9DE58240A79F800B78B7A /* ActionIssueTVC.swift */,
+				5EA9DE6C240B21E600B78B7A /* DateSelectorTVC.swift */,
+				5EA9DE6E240BA73900B78B7A /* ReportTVC.swift */,
+				5EA9DE51240A676400B78B7A /* IssueVM.swift */,
+				5EA9DE56240A6BF800B78B7A /* IssueView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EA9DE53240A683100B78B7A /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE54240A685800B78B7A /* IssueVMUT.swift */,
+				5EA9DE65240B057E00B78B7A /* IssuePresenterUT.swift */,
+			);
+			path = Issue;
+			sourceTree = "<group>";
+		};
+		5EA9DE5A240A7CAC00B78B7A /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE5B240A7CBF00B78B7A /* AppColors.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		5EA9DE5F240AFA1300B78B7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE60240AFA3D00B78B7A /* IssueDBUT.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EA9DE67240B05C900B78B7A /* Issue */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9DE68240B05F700B78B7A /* IssueVCMock.swift */,
+				5EA9DE6A240B067C00B78B7A /* IssuePresenterMock.swift */,
+			);
+			path = Issue;
 			sourceTree = "<group>";
 		};
 		5EC5506C2406A4EB0073AD6A /* DomainLayer */ = {
@@ -434,6 +570,7 @@
 			children = (
 				5EC550712406A5290073AD6A /* ConcurrentOperation.swift */,
 				5EC550722406A5290073AD6A /* PresentMainAppOperation.swift */,
+				5EA9DE73240BC4C000B78B7A /* RequestNotificationPermissionOp.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -458,6 +595,7 @@
 		5EC5507D2406A98A0073AD6A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9DE49240A36A300B78B7A /* Issues */,
 				5E6834F62405D6DC001631FD /* Routes */,
 			);
 			path = Controllers;
@@ -680,13 +818,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA9DE76240BCACA00B78B7A /* AttributeIssueType.swift in Sources */,
 				5E84265E2407A5BD00B71563 /* RouteVM.swift in Sources */,
 				5E6CDE4B2404847A000B4EE8 /* ResponseCodeAPI.swift in Sources */,
+				5EA9DE5C240A7CBF00B78B7A /* AppColors.swift in Sources */,
 				5E8C86E0240852D20007CF6E /* StopPointVM.swift in Sources */,
 				5E8C86DC2408435E0007CF6E /* StopPoint.swift in Sources */,
+				5EA9DE4B240A36CA00B78B7A /* IssueVC.swift in Sources */,
+				5EA9DE6F240BA73900B78B7A /* ReportTVC.swift in Sources */,
+				5EA9DE4D240A374600B78B7A /* IssuePresenter.swift in Sources */,
+				5EA9DE50240A66C100B78B7A /* AttributeIssueTVC.swift in Sources */,
 				5EC550802406AA5B0073AD6A /* RoutesInteractor.swift in Sources */,
+				5EA9DE462409CFA400B78B7A /* Issue.swift in Sources */,
+				5EA9DE74240BC4C000B78B7A /* RequestNotificationPermissionOp.swift in Sources */,
 				5E6834E72405B9AF001631FD /* DataManager.swift in Sources */,
 				5EC5506B24069FF20073AD6A /* RoutesPresenter.swift in Sources */,
+				5EA9DE3B240996FE00B78B7A /* RealmConfig.swift in Sources */,
 				5E84265C24079FEF00B71563 /* RouteListCell.swift in Sources */,
 				5E6834EA2405BAF9001631FD /* Route.swift in Sources */,
 				5EC550772406A5960073AD6A /* MainFlowCoordinator.swift in Sources */,
@@ -695,13 +842,19 @@
 				5E6CDE4524047FDD000B4EE8 /* APIManager.swift in Sources */,
 				5EC550732406A5290073AD6A /* ConcurrentOperation.swift in Sources */,
 				5E6CDE4E24048979000B4EE8 /* RouteAPI.swift in Sources */,
+				5EA9DE442409A48E00B78B7A /* IssueDB.swift in Sources */,
+				5EA9DE6D240B21E600B78B7A /* DateSelectorTVC.swift in Sources */,
 				5EC5506F2406A5110073AD6A /* StartUpAppSequencer.swift in Sources */,
+				5EA9DE57240A6BF800B78B7A /* IssueView.swift in Sources */,
+				5EA9DE52240A676400B78B7A /* IssueVM.swift in Sources */,
 				5E6834FB2405D976001631FD /* RouteList.swift in Sources */,
 				5EC550742406A5290073AD6A /* PresentMainAppOperation.swift in Sources */,
 				5E7A06D9240511BD00157138 /* StopPointAPI.swift in Sources */,
 				5EC5507B2406A7AD0073AD6A /* UIApplicationExtension.swift in Sources */,
 				5E8426692407DF6D00B71563 /* Point.swift in Sources */,
 				5E84266D2407F78400B71563 /* RouteMap.swift in Sources */,
+				5EA9DE59240A79F800B78B7A /* ActionIssueTVC.swift in Sources */,
+				5EA9DE3924097F4D00B78B7A /* DBManager.swift in Sources */,
 				5E7A06D72405108800157138 /* PointAPI.swift in Sources */,
 				5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */,
 				5E8C86E4240854410007CF6E /* StringExtension.swift in Sources */,
@@ -713,17 +866,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EA9DE3E24099A7B00B78B7A /* DBManagerUT.swift in Sources */,
 				5E6834F42405CBA6001631FD /* DataManagerUT.swift in Sources */,
 				5E8C86DE240845870007CF6E /* StopPointUT.swift in Sources */,
 				5E8426602407A70600B71563 /* RouteVMUT.swift in Sources */,
+				5EA9DE69240B05F700B78B7A /* IssueVCMock.swift in Sources */,
 				5E6834EC2405BEBC001631FD /* RouteUT.swift in Sources */,
 				5EC550832406ADD10073AD6A /* RoutesInteractorUT.swift in Sources */,
+				5EA9DE55240A685800B78B7A /* IssueVMUT.swift in Sources */,
+				5EA9DE66240B057E00B78B7A /* IssuePresenterUT.swift in Sources */,
 				5E8E1C73240725810051EAF6 /* RoutesInteractor.swift in Sources */,
+				5EA9DE6B240B067C00B78B7A /* IssuePresenterMock.swift in Sources */,
 				5E6834F12405CA23001631FD /* APIManagerMock.swift in Sources */,
 				5E84266B2407E1AD00B71563 /* PointUT.swift in Sources */,
 				5E8E1C70240723A70051EAF6 /* RoutesPresenterMock.swift in Sources */,
+				5EA9DE482409D14E00B78B7A /* IssueUT.swift in Sources */,
 				5E8E1C672407145E0051EAF6 /* RoutesVCMock.swift in Sources */,
 				5E6CDE49240482EA000B4EE8 /* APIManagerUT.swift in Sources */,
+				5EA9DE61240AFA3D00B78B7A /* IssueDBUT.swift in Sources */,
 				5EC550852406AE510073AD6A /* DataManagerMock.swift in Sources */,
 				5E8E1C6C240718760051EAF6 /* RoutesVCUT.swift in Sources */,
 				5E8E1C6E240722830051EAF6 /* RoutesPresenterUT.swift in Sources */,

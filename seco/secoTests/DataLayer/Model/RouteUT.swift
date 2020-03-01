@@ -28,7 +28,7 @@ class RouteUT: XCTestCase {
                                 driverName: "Alberto Morales",
                                 route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
         // When
-        let route = Route(routeAPI: routeAPI)
+        let route = Route(routeAPI: routeAPI, hasIssue: false)
         // Then
         XCTAssertEqual(route.driverName, "Alberto Morales")
         XCTAssertEqual(route.originAddress, "Barcelona")

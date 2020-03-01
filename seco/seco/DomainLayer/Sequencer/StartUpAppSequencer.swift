@@ -16,11 +16,14 @@ class  StartUpAppSequencer {
     func start() {
 
         let presentMainAppOperation = PresentMainAppOperation()
+        let requestNotificationPermissionOp = RequestNotificationPermissionOp()
 
-        let operations = [presentMainAppOperation]
+        let operations = [requestNotificationPermissionOp,
+                          presentMainAppOperation]
 
         // Add operation dependencies
-       
+        presentMainAppOperation.addDependency(requestNotificationPermissionOp)
+        
         operationQueue.addOperations(operations, waitUntilFinished: false)
     }
 }

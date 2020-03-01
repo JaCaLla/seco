@@ -18,6 +18,7 @@ class RoutesInteractorUT: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let dataManagerMock: DataManagerProtocol = DataManagerMock()
         sut = RoutesInteractor(dataManager: dataManagerMock)
+        DBManager.shared.reset()
     }
 
     func test_getAllRoutes() {
@@ -65,6 +66,59 @@ class RoutesInteractorUT: XCTestCase {
                 XCTFail()
             }
             asyncExpectation.fulfill()
+        })
+        self.waitForExpectations(timeout: 2.0, handler: nil)
+    }
+    
+    func test_getIssue() {
+        // Given
+        // When
+        let asyncExpectation = expectation(description: "\(#function)")
+        sut.getIssue(route: "asdf",
+                     onComplete:{ issue in
+            guard let uwpIssue = issue else {
+                XCTFail()
+                asyncExpectation.fulfill()
+                return
+            }
+            XCTAssertEqual(uwpIssue.route, "asdf")
+            XCTAssertEqual(uwpIssue.name, "Pepito")
+            XCTAssertEqual(uwpIssue.surename, "Grillo")
+            XCTAssertEqual(uwpIssue.email, "pegri@mailinator.com")
+
+            asyncExpectation.fulfill()
+        })
+        self.waitForExpectations(timeout: 2.0, handler: nil)
+    }
+    
+    func test_createIssue() {
+        // Given
+        let issue = Issue(route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
+                          name: "Sara",
+                          surename: "Gutierrez",
+                          email: "sagu@mailinator.com", timestamp: 123, report:"blah, blah", phone: "123456789")
+
+        let asyncExpectation = expectation(description: "\(#function)")
+        // When
+        sut.create(issue: issue, onComplete: { [weak self] in
+            // Then
+            self?.sut.getIssue(route: "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@",
+                               onComplete: { issue in
+                                   guard let uwpIssue = issue else {
+                                       XCTFail()
+                                       asyncExpectation.fulfill()
+                                       return
+                                   }
+                                   XCTAssertEqual(uwpIssue.route, "sdq{Fc}iLj@zR|W~TryCzvC??do@jkKeiDxjIccLhiFqiE`uJqe@rlCy~B`t@sK|i@")
+                                   XCTAssertEqual(uwpIssue.name, "Sara")
+                                   XCTAssertEqual(uwpIssue.surename, "Gutierrez")
+                                   XCTAssertEqual(uwpIssue.email, "sagu@mailinator.com")
+                                XCTAssertEqual(uwpIssue.timestamp, 123)
+                                XCTAssertEqual(uwpIssue.report, "blah, blah")
+                                XCTAssertEqual(uwpIssue.phone, "123456789")
+
+                                   asyncExpectation.fulfill()
+                               })
         })
         self.waitForExpectations(timeout: 2.0, handler: nil)
     }

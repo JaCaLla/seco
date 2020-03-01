@@ -15,6 +15,8 @@ protocol RoutesVCProtocol: AnyObject {
     func presentFetchedRoutes(routesVM: [RouteVM])
     func presentPopUp(stopPointVM: StopPointVM)
     func present(error: Error)
+    
+    func onGetIssue(issue: Issue)
 }
 
 class RoutesVC: UIViewController {
@@ -23,37 +25,42 @@ class RoutesVC: UIViewController {
     @IBOutlet weak var routeList: RouteList!
     @IBOutlet weak var routeMap: RouteMap!
     
+    // MARK: - Callback
+    var onGetIssue: (Issue) -> Void = { _ in /* Default empty block */}
+    
     // MARK: - Private attributes
     var presenter: RoutesPresenterProtocol = RoutesPresenter()
-    
+
     // MARK: - Constructor/Initializer
-    
     public static func instantiate(presenter: RoutesPresenterProtocol = RoutesPresenter()) -> RoutesVC {
         let storyboard = UIStoryboard(name: R.storyboard.main.name, bundle: nil)
         guard let routesVC = storyboard.instantiateViewController(withIdentifier: String(describing: RoutesVC.self)) as? RoutesVC else {
-                return RoutesVC()
+            return RoutesVC()
         }
         routesVC.presenter = presenter
         presenter.set(routesVC: routesVC)
         return routesVC
     }
-    
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViewController()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         presenter.fetchRoutes()
+        presenter.fetchRoutes()
     }
-    
+
     // MARK: - Private methods
     func setupViewController() {
         routeList.onSelect = { [weak self] routeVM in
             self?.routeMap.set(routeVM: routeVM)
+        }
+        routeList.onGetIssue = { [weak self] routeVM in
+            self?.presenter.fetchIssue(route: routeVM.route)
         }
         routeMap.onSelectedStop = { [weak self] stopId in
             self?.presenter.fetchStopPoint(stopId: stopId)
@@ -63,8 +70,12 @@ class RoutesVC: UIViewController {
 
 // MARK: - RoutesVCProtocol
 extension RoutesVC: RoutesVCProtocol {
+    func onGetIssue(issue: Issue) {
+       onGetIssue(issue)
+    }
+    
     func presentPopUp(stopPointVM: StopPointVM) {
-        
+
         let alert = UIAlertController(title: stopPointVM.title,
                                       message: stopPointVM.message,
                                       preferredStyle: UIAlertController.Style.alert)
@@ -73,21 +84,21 @@ extension RoutesVC: RoutesVCProtocol {
                                       handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
+
+
     func presentActivityIndicator() {
         SVProgressHUD.setContainerView(self.view)
         SVProgressHUD.show()
     }
-    
+
     func removeActivityIndicator() {
         SVProgressHUD.dismiss()
     }
-    
+
     func presentFetchedRoutes(routesVM: [RouteVM]) {
         routeList.set(routes: routesVM)
     }
-    
+
     func present(error: Error) {
         // TODO
     }

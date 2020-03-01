@@ -12,19 +12,22 @@ class RouteVMUT: XCTestCase {
 
     func test_initializer() {
         // Given
-        let route = Route(driverName: "Alberto Morales",
-        originAddress: "Barcelona",
-        destinationAddress: "Martorell",
-        startTime: "2018-12-18T08:00:00.000Z",
-        endTime: "2018-12-18T09:00:00.000Z",
-        points: [])
+        let route: Route = Route(route: "1",
+                                 driverName: "Alberto Morales",
+                                 originAddress: "Barcelona",
+                                 destinationAddress: "Martorell",
+                                 startTime: "2018-12-18T08:00:00.000Z",
+                                 endTime: "2018-12-18T09:00:00.000Z",
+                                 points: [],
+                                 hasIssue: true)
         // When
         let routeVM = RouteVM(route: route)
         //Then
+        XCTAssertEqual(routeVM.route, "1")
         XCTAssertEqual(routeVM.driverName, "Alberto Morales")
         XCTAssertEqual(routeVM.originDestination, "Barcelona - Martorell")
         XCTAssertEqual(routeVM.startEnd, "2018-12-18T08:00:00.000Z - 2018-12-18T09:00:00.000Z")
-        
+
     }
 
 }

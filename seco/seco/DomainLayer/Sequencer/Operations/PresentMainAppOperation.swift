@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class PresentMainAppOperation: ConcurrentOperation {
 
@@ -15,10 +16,9 @@ class PresentMainAppOperation: ConcurrentOperation {
     }
 
     override func main() {
-
         DispatchQueue.main.async {
-            MainFlowCoordinator.shared.start()
-            self.state = .finished
-        }
+              MainFlowCoordinator.shared.start()
+              self.state = .finished
+          }
     }
 }
