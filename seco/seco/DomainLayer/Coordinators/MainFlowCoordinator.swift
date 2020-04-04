@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Combine
+import SwiftUI
 
 class MainFlowCoordinator {
 
@@ -46,15 +47,18 @@ class MainFlowCoordinator {
 
     private func presentIssue(issue: Issue) {
 
-        let issueVM: IssueVM = IssueVM(issue: issue)
-        let issueVC = IssueVC.instantiate(issueVM: issueVM)
-        issueVC.onDismiss = { [weak self] in
-            guard let weakSelf = self else { return }
-            weakSelf.navigationController.popViewController(animated: true)
-        }
-        issueVC
-
-        navigationController.pushViewController(issueVC, animated: true)
+//        let issueVM: IssueVM = IssueVM(issue: issue)
+//        let issueVC = IssueVC.instantiate(issueVM: issueVM)
+//        issueVC.onDismiss = { [weak self] in
+//            guard let weakSelf = self else { return }
+//            weakSelf.navigationController.popViewController(animated: true)
+//        }
+//        issueVC
+//
+//        navigationController.pushViewController(issueVC, animated: true)
+        
+        let hostingController = UIHostingController(rootView: FormView())
+        navigationController.pushViewController(hostingController, animated: true)
     }
 
 
