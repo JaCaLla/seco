@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import Combine
 
 protocol RoutesVCProtocol: AnyObject {
     func presentActivityIndicator()
@@ -27,6 +28,12 @@ class RoutesVC: UIViewController {
     
     // MARK: - Callback
     var onGetIssue: (Issue) -> Void = { _ in /* Default empty block */}
+    
+    var onGetIssuePublisher: AnyPublisher<Issue, Never> {
+      return onGetIssueInternalPublisher.eraseToAnyPublisher()
+    }
+   // itemSelectionPublisher
+    public var onGetIssueInternalPublisher = PassthroughSubject<Issue, Never>()
     
     // MARK: - Private attributes
     var presenter: RoutesPresenterProtocol = RoutesPresenter()
@@ -72,6 +79,7 @@ class RoutesVC: UIViewController {
 extension RoutesVC: RoutesVCProtocol {
     func onGetIssue(issue: Issue) {
        onGetIssue(issue)
+         onGetIssueInternalPublisher.send(issue)
     }
     
     func presentPopUp(stopPointVM: StopPointVM) {

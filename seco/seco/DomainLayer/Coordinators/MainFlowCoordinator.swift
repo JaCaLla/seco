@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Combine
 
 class MainFlowCoordinator {
 
@@ -16,6 +17,7 @@ class MainFlowCoordinator {
 
     // MARK: - Private attributes
     private let navigationController = UINavigationController()
+     private var subscriptions = Set<AnyCancellable>()
 
 
     private init() { /*This prevents others from using the default '()' initializer for this class. */ }
@@ -30,8 +32,11 @@ class MainFlowCoordinator {
 
         let routesVC = RoutesVC.instantiate()
         routesVC.onGetIssue = { [weak self] issue in
-            self?.presentIssue(issue: issue)
+           // self?.presentIssue(issue: issue)
         }
+        routesVC.onGetIssueInternalPublisher.sink { issue in
+            self.presentIssue(issue: issue)
+        }.store(in: &subscriptions)
         routesVC.modalTransitionStyle = .crossDissolve
         guard let window = UIApplication.shared.keyWindowInConnectedScenes else { return }
         navigationController.viewControllers = [routesVC]
@@ -47,6 +52,7 @@ class MainFlowCoordinator {
             guard let weakSelf = self else { return }
             weakSelf.navigationController.popViewController(animated: true)
         }
+        issueVC
 
         navigationController.pushViewController(issueVC, animated: true)
     }
