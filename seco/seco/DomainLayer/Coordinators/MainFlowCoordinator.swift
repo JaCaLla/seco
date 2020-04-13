@@ -18,8 +18,8 @@ class MainFlowCoordinator {
 
     // MARK: - Private attributes
     private let navigationController = UINavigationController()
-     private var subscriptions = Set<AnyCancellable>()
-
+    private var onGetIssueSubscription = Set<AnyCancellable>()
+    private var onDismissIssueSubscription = Set<AnyCancellable>()
 
     private init() { /*This prevents others from using the default '()' initializer for this class. */ }
 
@@ -32,12 +32,9 @@ class MainFlowCoordinator {
     private func presentTransactionsList() {
 
         let routesVC = RoutesVC.instantiate()
-        routesVC.onGetIssue = { [weak self] issue in
-           // self?.presentIssue(issue: issue)
-        }
         routesVC.onGetIssueInternalPublisher.sink { issue in
             self.presentIssue(issue: issue)
-        }.store(in: &subscriptions)
+        }.store(in: &onGetIssueSubscription)
         routesVC.modalTransitionStyle = .crossDissolve
         guard let window = UIApplication.shared.keyWindowInConnectedScenes else { return }
         navigationController.viewControllers = [routesVC]
@@ -47,19 +44,23 @@ class MainFlowCoordinator {
 
     private func presentIssue(issue: Issue) {
 
-//        let issueVM: IssueVM = IssueVM(issue: issue)
-//        let issueVC = IssueVC.instantiate(issueVM: issueVM)
-//        issueVC.onDismiss = { [weak self] in
-//            guard let weakSelf = self else { return }
-//            weakSelf.navigationController.popViewController(animated: true)
-//        }
-//        issueVC
-//
-//        navigationController.pushViewController(issueVC, animated: true)
-        
-        let hostingController = UIHostingController(rootView: FormView())
-        navigationController.pushViewController(hostingController, animated: true)
+        #if false
+            let issueVM: IssueVM = IssueVM(issue: issue)
+            let issueVC = IssueVC.instantiate(issueVM: issueVM)
+            issueVC.onDismissPublisher = { [weak self] in
+                guard let weakSelf = self else { return }
+                weakSelf.navigationController.popViewController(animated: true)
+            }
+            navigationController.pushViewController(issueVC, animated: true)
+
+        #else
+            let issueUI = IssueUI(issue: issue)
+            let formView = FormView(issueUI: issueUI)
+            formView.onDismissPublisher.sink {
+                self.navigationController.popViewController(animated: true)
+            }.store(in: &onDismissIssueSubscription)
+            let formVC = UIHostingController(rootView: formView)
+            navigationController.pushViewController(formVC, animated: true)
+        #endif
     }
-
-
 }

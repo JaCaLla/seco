@@ -78,7 +78,7 @@ class RoutesVC: UIViewController {
 // MARK: - RoutesVCProtocol
 extension RoutesVC: RoutesVCProtocol {
     func onGetIssue(issue: Issue) {
-       onGetIssue(issue)
+    //   onGetIssue(issue)
          onGetIssueInternalPublisher.send(issue)
     }
     

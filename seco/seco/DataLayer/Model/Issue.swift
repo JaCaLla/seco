@@ -53,4 +53,14 @@ struct Issue {
                   report: issueVM.report,
                   phone: issueVM.phone)
     }
+    
+    init(issueUI: IssueUI) {
+        self.init(route: issueUI.route,
+                  name: issueUI.name,
+                  surename: issueUI.surename,
+                  email: issueUI.email,
+                  timestamp: issueUI.timestamp.timeIntervalSince1970,
+                  report: issueUI.report,
+                  phone: issueUI.phone)
+    }
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E60D7C62441278F001E7616 /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D7C52441278F001E7616 /* TextInputCell.swift */; };
+		5E60D7C824412906001E7616 /* IssueUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D7C724412906001E7616 /* IssueUI.swift */; };
+		5E60D7CA244135F1001E7616 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D7C9244135F1001E7616 /* ActionCell.swift */; };
+		5E60D7CC2441B613001E7616 /* DateSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D7CB2441B613001E7616 /* DateSelectorCell.swift */; };
+		5E60D7FE2441E1C9001E7616 /* BordererViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D7FD2441E1C8001E7616 /* BordererViewModifier.swift */; };
+		5E60D806244364B1001E7616 /* IssuePresenterNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D805244364B1001E7616 /* IssuePresenterNew.swift */; };
+		5E60D80C2444AB5E001E7616 /* MultilineInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D80B2444AB5E001E7616 /* MultilineInputCell.swift */; };
+		5E60D80E2444C790001E7616 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D80D2444C78F001E7616 /* KeyboardFollower.swift */; };
 		5E6834E72405B9AF001631FD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6834E62405B9AF001631FD /* DataManager.swift */; };
 		5E6834EA2405BAF9001631FD /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6834E92405BAF9001631FD /* Route.swift */; };
 		5E6834EC2405BEBC001631FD /* RouteUT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6834EB2405BEBC001631FD /* RouteUT.swift */; };
@@ -91,6 +99,14 @@
 /* Begin PBXFileReference section */
 		09D9AC7E0AB2BF3639881ACB /* Pods-secoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-secoTests.release.xcconfig"; path = "Target Support Files/Pods-secoTests/Pods-secoTests.release.xcconfig"; sourceTree = "<group>"; };
 		0EA6C57A37C7FBF5392D879E /* Pods-seco.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seco.release.xcconfig"; path = "Target Support Files/Pods-seco/Pods-seco.release.xcconfig"; sourceTree = "<group>"; };
+		5E60D7C52441278F001E7616 /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
+		5E60D7C724412906001E7616 /* IssueUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueUI.swift; sourceTree = "<group>"; };
+		5E60D7C9244135F1001E7616 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		5E60D7CB2441B613001E7616 /* DateSelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectorCell.swift; sourceTree = "<group>"; };
+		5E60D7FD2441E1C8001E7616 /* BordererViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BordererViewModifier.swift; sourceTree = "<group>"; };
+		5E60D805244364B1001E7616 /* IssuePresenterNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuePresenterNew.swift; sourceTree = "<group>"; };
+		5E60D80B2444AB5E001E7616 /* MultilineInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineInputCell.swift; sourceTree = "<group>"; };
+		5E60D80D2444C78F001E7616 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFollower.swift; sourceTree = "<group>"; };
 		5E6834E62405B9AF001631FD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5E6834E92405BAF9001631FD /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		5E6834EB2405BEBC001631FD /* RouteUT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteUT.swift; sourceTree = "<group>"; };
@@ -152,7 +168,7 @@
 		5EA9DE6E240BA73900B78B7A /* ReportTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTVC.swift; sourceTree = "<group>"; };
 		5EA9DE73240BC4C000B78B7A /* RequestNotificationPermissionOp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationPermissionOp.swift; sourceTree = "<group>"; };
 		5EA9DE75240BCACA00B78B7A /* AttributeIssueType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeIssueType.swift; sourceTree = "<group>"; };
-		5EC1EB64243897A400A209B1 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		5EC1EB64243897A400A209B1 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormView.swift; path = ../../FormView.swift; sourceTree = "<group>"; };
 		5EC5506A24069FF20073AD6A /* RoutesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesPresenter.swift; sourceTree = "<group>"; };
 		5EC5506E2406A5110073AD6A /* StartUpAppSequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartUpAppSequencer.swift; sourceTree = "<group>"; };
 		5EC550712406A5290073AD6A /* ConcurrentOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperation.swift; sourceTree = "<group>"; };
@@ -195,6 +211,38 @@
 				7E90D9FD52AB3485DFE3C5A3 /* Pods_secoTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E60D7C02440EF2A001E7616 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				5E60D8002441E3B1001E7616 /* Cells */,
+				5E60D7FF2441E3A3001E7616 /* Modifiers */,
+				5EC1EB64243897A400A209B1 /* FormView.swift */,
+				5E60D7C724412906001E7616 /* IssueUI.swift */,
+				5E60D805244364B1001E7616 /* IssuePresenterNew.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		5E60D7FF2441E3A3001E7616 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				5E60D80D2444C78F001E7616 /* KeyboardFollower.swift */,
+				5E60D7FD2441E1C8001E7616 /* BordererViewModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		5E60D8002441E3B1001E7616 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5E60D7C9244135F1001E7616 /* ActionCell.swift */,
+				5E60D7C52441278F001E7616 /* TextInputCell.swift */,
+				5E60D7CB2441B613001E7616 /* DateSelectorCell.swift */,
+				5E60D80B2444AB5E001E7616 /* MultilineInputCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		5E6834E82405BADC001631FD /* Model */ = {
@@ -379,7 +427,6 @@
 				5E6834FC2405DAC2001631FD /* Storyboards */,
 				5E70DEF323FF20BF00ACC2C7 /* Resources */,
 				5EC550782406A7650073AD6A /* Extensions */,
-				5EC1EB64243897A400A209B1 /* FormView.swift */,
 			);
 			path = ViewLayer;
 			sourceTree = "<group>";
@@ -598,6 +645,7 @@
 		5EC5507D2406A98A0073AD6A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5E60D7C02440EF2A001E7616 /* Form */,
 				5EA9DE49240A36A300B78B7A /* Issues */,
 				5E6834F62405D6DC001631FD /* Routes */,
 			);
@@ -835,10 +883,12 @@
 				5EA9DE462409CFA400B78B7A /* Issue.swift in Sources */,
 				5EA9DE74240BC4C000B78B7A /* RequestNotificationPermissionOp.swift in Sources */,
 				5E6834E72405B9AF001631FD /* DataManager.swift in Sources */,
+				5E60D7C824412906001E7616 /* IssueUI.swift in Sources */,
 				5EC5506B24069FF20073AD6A /* RoutesPresenter.swift in Sources */,
 				5EA9DE3B240996FE00B78B7A /* RealmConfig.swift in Sources */,
 				5E84265C24079FEF00B71563 /* RouteListCell.swift in Sources */,
 				5E6834EA2405BAF9001631FD /* Route.swift in Sources */,
+				5E60D806244364B1001E7616 /* IssuePresenterNew.swift in Sources */,
 				5EC550772406A5960073AD6A /* MainFlowCoordinator.swift in Sources */,
 				5E6834F82405D84F001631FD /* RoutesVC.swift in Sources */,
 				5E70DED023FF1FC800ACC2C7 /* AppDelegate.swift in Sources */,
@@ -851,18 +901,24 @@
 				5EA9DE57240A6BF800B78B7A /* IssueView.swift in Sources */,
 				5EA9DE52240A676400B78B7A /* IssueVM.swift in Sources */,
 				5E6834FB2405D976001631FD /* RouteList.swift in Sources */,
+				5E60D7C62441278F001E7616 /* TextInputCell.swift in Sources */,
 				5EC1EB65243897A400A209B1 /* FormView.swift in Sources */,
 				5EC550742406A5290073AD6A /* PresentMainAppOperation.swift in Sources */,
+				5E60D7CC2441B613001E7616 /* DateSelectorCell.swift in Sources */,
+				5E60D7FE2441E1C9001E7616 /* BordererViewModifier.swift in Sources */,
 				5E7A06D9240511BD00157138 /* StopPointAPI.swift in Sources */,
 				5EC5507B2406A7AD0073AD6A /* UIApplicationExtension.swift in Sources */,
+				5E60D80C2444AB5E001E7616 /* MultilineInputCell.swift in Sources */,
 				5E8426692407DF6D00B71563 /* Point.swift in Sources */,
 				5E84266D2407F78400B71563 /* RouteMap.swift in Sources */,
+				5E60D80E2444C790001E7616 /* KeyboardFollower.swift in Sources */,
 				5EA9DE59240A79F800B78B7A /* ActionIssueTVC.swift in Sources */,
 				5EA9DE3924097F4D00B78B7A /* DBManager.swift in Sources */,
 				5E7A06D72405108800157138 /* PointAPI.swift in Sources */,
 				5E70DED223FF1FC800ACC2C7 /* SceneDelegate.swift in Sources */,
 				5E8C86E4240854410007CF6E /* StringExtension.swift in Sources */,
 				5E70DEF623FF22DF00ACC2C7 /* R.generated.swift in Sources */,
+				5E60D7CA244135F1001E7616 /* ActionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
